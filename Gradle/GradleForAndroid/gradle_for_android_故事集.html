@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Gradle For Android 故事集</title>
+
+</head>
+<body>
+<h1>Gradle For Android 故事集</h1>
+
+<hr />
+
+<h2>一. 常见问题及解决</h2>
+
+<h3>1.<a href="http://blog.csdn.net/u011421608/article/details/50543774">卡在refreshing gradle project</a></h3>
+
+<p>............这个，点标题都有说明，自己看吧。</p>
+
+<p>好吧，简单说一下，就是你的IDE没有能翻墙,所以自己去下覆盖下文件就好了，节约几个小时。</p>
+
+<ol>
+<li>找到gradle-wrapper.properties，位置在 项目根目录->gradle->wrapper->gradle-wrapper.properties</li>
+<li>复制distributionUrl的地址,从浏览器打开，注意把其中的"\"去掉才能下载，如下载gradle-2.14.1-all.zip</li>
+<li>把下载好的压缩包放到放到gradle系统目录,macos在~/.gradle/wrapper/dists/gradle-x.x.x-all</li>
+<li>把压缩包放到gradle-2.14.1-all这个文件夹目录下的随机生成的文件夹下即可</li>
+<li>重启Android Studio，试试看，不行自己搜去，谢谢</li>
+</ol>
+
+
+<h3>2. <a href="http://stormzhang.com/android/2015/03/01/android-reference-local-aar/">引用本地aar</a></h3>
+
+<p>有时候我们需要引用别人的aar库,并不能像jar一样一行就解决</p>
+
+<p>1.在项目build.gradle的根节点添加</p>
+
+<pre><code>repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+</code></pre>
+
+<p>2.在dependencies内添加依赖</p>
+
+<pre><code>compile (name : 'zues-release', ext:'aar')
+</code></pre>
+
+<h3>3. <a href="https://zhidao.baidu.com/question/1693352926446133428.html">引用冲突:不同的本地module引用相同的开源库</a></h3>
+
+<p>在老版本的Android Studio中,如果library module使用compile的方式引用开源库，最后会打包到aar，
+后来更新2.x以上之后就没有这个问题了,使用compile或者provided都可以</p>
+
+<h3>4. Android Studio有提示的错误</h3>
+
+<p>有fix的，直接点fix就好了,不行再搜</p>
+
+<hr />
+
+<h1>二: <a href="http://www.jianshu.com/p/1e95d03060f7">Gradle的基石-Groovy</a></h1>
+
+<p>Gradle是基于groovy语言实现的插件,所以大概了解groovy可以比较有效的理解gradle脚本到底写的是些什么内容。groovy其实跟java基本相同,完全可以用Java的代码来写groovy。只是多了一些关键字和语法而已。语法跟js比较类似。</p>
+
+<p><strong>重点:</strong> 与java不同的一点是Groovy多了一个闭包的概念，跟oc里的代码块(block)是类似的东西。就是可以作为一个参数传递一个可执行的过程，gradle中大部分都是通过闭包来实现的。<strong>闭包有一个隐式变量叫it,当然也可以通过->的方式进行变量的重命名</strong>.</p>
+
+<pre><code>def hello = {
+    println(it)
+}
+hello('hello wrold')
+==&gt; hello world
+
+def sum = {
+    a,b -&gt; return a+b;
+}
+println(sum(3, 4))
+==&gt;7
+</code></pre>
+
+<p><em>现在我们再去看一下app下的build.gradle，看看是不是能看懂了</em></p>
+
+<ul>
+<li>参考链接 : <a href="http://www.jianshu.com/p/1e95d03060f7">http://www.jianshu.com/p/1e95d03060f7</a></li>
+</ul>
+
+
+<hr />
+
+<h1>三: 配置构建</h1>
+
+<p>配置构造是Google工程师扩展gradle,支持android更多的功能.具体有哪些我们通过官方文档来简单看一下。</p>
+
+<h5>重点的主要有</h5>
+
+<ul>
+<li><a href="https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html">buildTypes</a> ：构建变体</li>
+<li><a href="https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.ProductFlavor.html">productFlavors</a> : 产品风格</li>
+<li><a href="https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.BaseExtension.html#com.android.build.gradle.BaseExtension:defaultConfig">defaultConfig</a> : 默认产品配置，被所有产品版本共享，可以被覆盖,产品风格的结构与默认产品结构一样。</li>
+</ul>
+
+
+<h5>额外再说几个可能会有用的属性 ：</h5>
+
+<p><strong>defaultPublishConfig</strong> : 默认发布的构建变体, library项目默认是'release', 可以通过该属性来修改</p>
+
+<p><strong>publishNonDefault</strong> : 没有默认发布的构建变体, 如果该属性设置为true,library会打包所有的构建产品</p>
+
+<p><em>publishNonDefault与defaultPublishConfig理论上是互斥的关系,一种是只打包一个，另外一种是打包所有的构建产品</em></p>
+
+<blockquote><p>示范:</p></blockquote>
+
+<p>库项目A的build.gradle中android内定义如下</p>
+
+<pre><code>android {
+    defaultPublishConfig 'flavorRelease'
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+
+    defaultConfig {
+       minSdkVersion 9
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        hello {
+            initWith(release)
+        }
+    }
+
+    productFlavors {
+        flavor{}
+        flavor2{}
+    }
+}
+</code></pre>
+
+<p>App依赖库项目A不同的渠道包:</p>
+
+<p><strong>1.App区分flavor3, flavor4，分别依赖库项目的flavor,flavor2，那dependencies的写法就是如下这样:</strong></p>
+
+<pre><code>    dependencies {
+        flavor3Compile project(path:':A', configuration:'flavorRelease')
+        flavor4Compile project(path:':A', configuration:'flavor2Release')
+    }
+</code></pre>
+
+<p>Tips: <em>注意需要区分Release还是Debug,一般依赖的aar都使用release吧。并且库项目</em>publishNonDefault为true_</p>
+
+<p><strong>2.如果App也细致的区分productFlavors和buildTypes所依赖的构建产品，那么，我们还需要再做一步，在dependencies同级再重写一个闭包configurations，如下:</strong></p>
+
+<pre><code>    configurations {
+        flavor3ReleaseCompile
+        flavor4ReleaseCompile
+    }
+</code></pre>
+
+<p>这样定义之后,dependencies变成如下:</p>
+
+<pre><code>    dependencies {
+        flavor3ReleaseCompile project(path:':A', configuration:'flavorRelease')
+        flavor4ReleaseCompile project(path:':A', configuration:'flavor2Release')
+    }
+</code></pre>
+
+<p><strong>flavorDimensions</strong>:产品风格还可以再细分多个维度,这个有顺序,定义在前面的，源集名就在前面，跟productFlavors在buildTypes一样。</p>
+
+<p><strong>sourceSets</strong>: 源集，定义buildTypes与productFlavors就生成了相关源集的配置，可以通过新建如下的文件夹来进行构建产品的自定义。</p>
+
+<p>src/main/
+此源集包括所有构建变体共用的代码和资源。</p>
+
+<p>src/&lt;buildType>/
+创建此源集可加入特定构建类型专用的代码和资源。</p>
+
+<p>src/&lt;productFlavor>/
+创建此源集可加入特定产品风味专用的代码和资源。</p>
+
+<p>src/&lt;productFlavorBuildType>/
+创建此源集可加入特定构建变体专用的代码和资源。</p>
+
+<p><em>他们会进行一层层覆盖,优先级 : 构建变体 > 构建类型 > 产品风味 > 主源集 > 库依赖项</em></p>
+
+<p><strong>consumerProguardFiles</strong>: 库项目保留的混淆文件,省去了去主项目配置混淆的麻烦。</p>
+
+<h5>看的过程中我接触到的新知识：</h5>
+
+<p>Data Binding入门篇 : <a href="http://blog.zhaiyifan.cn/2016/06/16/android-new-project-from-0-p7/">http://blog.zhaiyifan.cn/2016/06/16/android-new-project-from-0-p7/</a></p>
+
+<p>参考链接 :</p>
+
+<ul>
+<li><a href="%E9%85%8D%E7%BD%AE%E6%9E%84%E5%BB%BA%20_%20Android%20Studio.htm">android 配置构建 官方说明</a> : <a href="https://developer.android.com/studio/build/index.html">https://developer.android.com/studio/build/index.html</a></li>
+<li><a href="%E9%85%8D%E7%BD%AE%E6%9E%84%E5%BB%BA%E5%8F%98%E4%BD%93%20_%20Android%20Studio.htm">android 构建变体 官方说明</a>: <a href="https://developer.android.com/studio/build/build-variants.html">https://developer.android.com/studio/build/build-variants.html</a></li>
+<li><a href="%E5%88%9B%E5%BB%BA%20Android%20%E5%BA%93%20_%20Android%20Studio.htm">android 库说明</a>: <a href="https://developer.android.com/studio/projects/android-library.html?hl=zh-cn">https://developer.android.com/studio/projects/android-library.html?hl=zh-cn</a></li>
+<li>android gradle dsl: <a href="http://google.github.io/android-gradle-dsl/current/index.html">http://google.github.io/android-gradle-dsl/current/index.html</a></li>
+<li>android gradle dsl in github :<a href="https://github.com/google/android-gradle-dsl">https://github.com/google/android-gradle-dsl</a></li>
+<li>多构建产品依赖: <a href="http://wiki.jikexueyuan.com/project/android-gradle-guide/libraries-and-multi-project-setup.html">http://wiki.jikexueyuan.com/project/android-gradle-guide/libraries-and-multi-project-setup.html</a></li>
+</ul>
+
+
+<hr />
+
+<h1>四: 10分钟实现Maven私有库</h1>
+
+<p>就像松科构思的是，想把公司的android项目，能共用的就共用，但是，现在的情况是，触手录跟触手tv是不同的项目，对于单独一个项目来说，svn可以管理你所有的代码，但是对于另一个项目来说，用另外一个项目的公用部分就有点麻烦了，一个是沟通，一个是实现起来，难道再有一个新项目，又要强制去你那个项目去拷贝这个库吗？这并不现实。</p>
+
+<p>其实目的就是公有库的使用，类似于jcenter的功能，只是不想给外网能够使用，那我们自己建立一个maven库就可以了，那以后通过compile服务器的库，就可以了。也便于其他各个项目去依赖。形成公司自有的代码库。</p>
+
+<ol>
+<li><a href="nexus-latest-bundle.tar.gz">下载nexus开源项目</a></li>
+<li>运行bin/nexus start</li>
+<li>查看自己ip，浏览器打开ip:8081/nexus,端口可以修改conf/nexus.properties，默认admin帐号是admin/admin123</li>
+<li>可以使用默认的库，也可以自己再添加,随意，帐号也可以新添加</li>
+<li>配置Android Studio uploadArchives[1],注意不要使用publishNonDefault为true,否则会发布所有的构建产品的aar包,如果需要可以通过写groovy来实现遍历所有变体，结合defaultPublishConfig和修改上传的artifactId，再上传</li>
+<li>浏览器上可以看到上传的下面有aar包</li>
+<li>在需要用的项目中依赖[2]</li>
+</ol>
+
+
+<p>[1]</p>
+
+<pre><code>uploadArchives {
+        repositories {
+            mavenDeployer {
+                snapshotRepository (url : ${snapshotUrl}){
+                    authentication(userName: ${name}, password: ${pwd})
+                }
+                repository (url : ${url}){
+                    authentication(userName: ${name}, password: ${pwd})
+                }
+                pom.project {
+                    version : ${version}
+                    groupId : ${groupId}
+                    artifactId : ${artifactId}
+                    packing : aar/jar, default is jar
+                    description : 描述该版本
+                }
+            }
+        }
+    }
+</code></pre>
+
+<p>[2]</p>
+
+<pre><code>    // 看需要添加私有maven添加到repositories节点下
+    repositories {
+        jcenter()
+        maven { url MAVEN_URL }
+    }
+
+    // 在项目中跟使用jcenter的库一样使用自己的库
+    compile ${groupId}:${artifactId}:${version}
+</code></pre>
+
+<p>参考链接：</p>
+
+<ul>
+<li><a href="http://zmywly8866.github.io/2016/01/05/android-private-maven-repository.html">http://zmywly8866.github.io/2016/01/05/android-private-maven-repository.html</a></li>
+</ul>
+
+
+<h1>五: 集成环境Jenkins</h1>
+
+<p>在以前的公司，有个同事把很繁杂的工作交给了他以前使用过的一个集成环境，Jenkins，可以执行很多自动化的工作，节省很多时间，这个在后期也可以考虑集成。以后只需要打开网站，点几下，就可以把以前需要自己动手的很多事情完成。而且可以让大多数人都能用，降低学习门槛。</p>
+
+<h1>六: 补充学习资料</h1>
+
+<p>在查找资料的过程中，发现极客学院免费的百科，可以比较全面的补充知识面。</p>
+
+<p><a href="http://wiki.jikexueyuan.com/list/android/">http://wiki.jikexueyuan.com/list/android/</a></p>
+</body>
+</html>

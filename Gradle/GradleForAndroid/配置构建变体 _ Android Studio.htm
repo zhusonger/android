@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://developer.android.com/studio/build/build-variants.html#product-flavors -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script async="" src="./配置构建变体 _ Android Studio_files/async-ads.js"></script><script type="text/javascript" async="" src="./配置构建变体 _ Android Studio_files/linkid.js"></script><script async="" src="./配置构建变体 _ Android Studio_files/analytics.js"></script><script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+
+
+
+
+<meta name="xsrf_token" content="qs-UCB8MuM0UaFaofzx2dGGr9GFsY2XLaThodfPFhFQ6MTQ5MjQwOTk5Njk4OTY4MA">
+
+  
+    <link rel="canonical" href="https://developer.android.com/studio/build/build-variants.html?hl=zh-cn">
+  
+
+  
+    <link rel="alternate" href="https://developer.android.com/studio/build/build-variants.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.com/studio/build/build-variants.html?hl=ko" hreflang="ko">
+  
+    <link rel="alternate" href="https://developer.android.com/studio/build/build-variants.html?hl=pt-br" hreflang="pt-br">
+  
+    <link rel="alternate" href="https://developer.android.com/studio/build/build-variants.html?hl=id" hreflang="id">
+  
+    <link rel="alternate" href="https://developer.android.com/studio/build/build-variants.html?hl=zh-cn" hreflang="zh-Hans">
+  
+    <link rel="alternate" href="https://developer.android.com/studio/build/build-variants.html?hl=ja" hreflang="ja">
+  
+    <link rel="alternate" href="https://developer.android.com/studio/build/build-variants.html?hl=es-419" hreflang="es-419">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/studio/build/build-variants.html" hreflang="en-cn">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/studio/build/build-variants.html?hl=ko" hreflang="ko-cn">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/studio/build/build-variants.html?hl=pt-br" hreflang="pt-br-cn">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/studio/build/build-variants.html?hl=id" hreflang="id-cn">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/studio/build/build-variants.html?hl=zh-cn" hreflang="zh-Hans-cn">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/studio/build/build-variants.html?hl=ja" hreflang="ja-cn">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/studio/build/build-variants.html?hl=es-419" hreflang="es-419-cn">
+  
+
+  <link rel="alternate" href="https://developer.android.com/studio/build/build-variants.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="https://developer.android.com/_static/e4ea3d50a6/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="https://developer.android.com/_static/e4ea3d50a6/images/android/touchicon-180.png">
+
+
+<title>
+
+  配置构建变体 | Android Studio
+
+</title>
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="./配置构建变体 _ Android Studio_files/css">
+<link rel="stylesheet" href="./配置构建变体 _ Android Studio_files/css(1)" title="roboto">
+
+
+
+
+
+<link href="./配置构建变体 _ Android Studio_files/default.css" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="./配置构建变体 _ Android Studio_files/android_3p-bundle.js" type="text/javascript"></script>
+<script src="./配置构建变体 _ Android Studio_files/script_foot_closure_android__zh_cn.js"></script>
+<script src="./配置构建变体 _ Android Studio_files/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = '/';
+  devsite.permissions.init({"039e5d84b87fd75807ffb37b7f1bbf2c": true, "098dafe57affddc137df300142652cfd": false, "cb025a64a50094835616312f4774a53d": true, "416fede3a228858e8c05b81c15c4c304": true, "51470233c56fc1fde50f00b73c52b216": false, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','en','es','es-419','pt-br','vi','ru','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="./配置构建变体 _ Android Studio_files/docs.js" type="text/javascript"></script>
+
+
+
+<script src="./配置构建变体 _ Android Studio_files/jsapi" type="text/javascript"></script><link type="text/css" href="./配置构建变体 _ Android Studio_files/default+en.css" rel="stylesheet"><link type="text/css" href="./配置构建变体 _ Android Studio_files/default(1).css" rel="stylesheet"><script type="text/javascript" src="./配置构建变体 _ Android Studio_files/default+en.I.js"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #ECEFF1;
+background-color: #ECEFF1;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+border-color: #D9D9D9;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+border-color: #2F5BB7;
+background-color: #357AE8;
+background-image: none;
+filter: none;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-color: #CCCCCC;
+border-bottom-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #CCCCCC;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #ECEFF1;
+background-color: #ECEFF1;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #ECEFF1;
+background-color: #ECEFF1;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #039BE5;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #039BE5;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #039BE5;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #039BE5;
+}
+.gsc-cursor-page {
+color: #039BE5;
+}
+a.gsc-trailing-more-results:link {
+color: #039BE5;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #333333;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #333333;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #333333;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #ECEFF1;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #CCCCCC;
+background-color: #ECEFF1;
+color: #039BE5;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #039BE5;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #F6F6F6;
+background-color: #F6F6F6;
+}
+.gsc-completion-title {
+color: #039BE5;
+}
+.gsc-completion-snippet {
+color: #333333;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #1155CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #666666;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #039BE5;
+}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:3px}.gssb_e{border:0}.gssb_l{margin:5px 0}#gsc-i-id1::-webkit-input-placeholder{font-size:14px}#gsc-i-id1:-moz-placeholder{font-size:14px}#gsc-i-id1::-moz-placeholder{font-size:14px}#gsc-i-id1:-ms-input-placeholder{font-size:14px}#gsc-i-id1:focus::-webkit-input-placeholder{color:transparent}#gsc-i-id1:focus:-moz-placeholder{color:transparent}#gsc-i-id1:focus::-moz-placeholder{color:transparent}#gsc-i-id1:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+
+<body class="gc-documentation                          dac-studio no-crumbs guide              dac-nav-open" itemscope="" itemtype="http://schema.org/Article">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;zh-cn&quot;, &quot;dimension4&quot;: &quot;Android Studio&quot;, &quot;dimension5&quot;: &quot;zh-cn&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;zh-cn&quot;, &quot;dimension4&quot;: &quot;Android Studio&quot;, &quot;dimension5&quot;: &quot;zh-cn&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "US", "language": {"requested": "zh-cn", "served": "zh-cn"}, "projectName": "Android Studio", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  <a href="https://developer.android.com/studio/build/build-variants.html#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        <a class="dac-nav-toggle" data-dac-toggle-nav="" href="https://developer.android.com/studio/build/build-variants.html" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+<a class="dac-header-logo" href="https://developer.android.com/studio/index.html">
+  
+  <img class="dac-header-logo-image" src="./配置构建变体 _ Android Studio_files/studio-icon.png" srcset="https://developer.android.com/studio/images/studio-icon_2x.png 2x" width="34" height="38" alt="">
+  
+Android Studio</a>
+<ul class="dac-header-tabs">
+  <li>
+    <a class="dac-header-tab" href="https://developer.android.com/studio/features.html" es-lang="Funciones" id-lang="Fitur" ja-lang="機能" ko-lang="기능" pt-br-lang="Recursos" zh-cn-lang="功能">功能</a>
+  </li>
+  <li>
+    <a class="dac-header-tab selected" href="https://developer.android.com/studio/intro/index.html" es-lang="Guía del usuario" id-lang="Panduan Pengguna" ja-lang="ユーザーガイド" ko-lang="사용자 가이드" pt-br-lang="Guia do usuário" zh-cn-lang="用户指南">用户指南</a>
+  </li>
+  
+  <li>
+    <a class="dac-header-tab" href="https://developer.android.com/studio/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    <div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap dac-hidden">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          <h2 style="padding-bottom: 0px;">Most visited</h2><hr>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          <h2 style="padding-bottom: 0px;">Recently visited</h2><hr>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+        <h2 style="padding-bottom: 0px;">Results for <span id="search-results-for"></span></h2><hr>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="./配置构建变体 _ Android Studio_files/cse.js" async=""></script>
+        <div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr" style="visibility: hidden;"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8" style="display: none;"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 " style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" style="width: 100%; padding: 0px; border: none; margin: -0.0625em 0px 0px; height: 1.25em; outline: none; background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px;" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="en" dir="ltr" spellcheck="false" placeholder="Custom Search"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;"><span class="gscb_a" id="gs_cb50">×</span></a></div></td></tr></tbody></table></div><input type="hidden" name="bgresponse" id="bgresponse"></td><td class="gsc-search-button"><input type="image" src="./配置构建变体 _ Android Studio_files/search_box_icon.png" class="gsc-search-button gsc-search-button-v2" title="search"></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gsc-branding"><tbody><tr><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img src="./配置构建变体 _ Android Studio_files/googlelogo_grey_46x15dp.png" class="gsc-branding-img" srcset="https://www.google.com/cse/static/images/2x/googlelogo_grey_46x15dp.png 2x"></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div><div class="gsc-tabsAreaInvisible"></div><div class="gsc-above-wrapper-area-invisible"><table cellspacing="0" cellpadding="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table cellspacing="0" cellpadding="0" class="gsc-resultsHeader"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div class="gsc-result-selector gsc-one-result" title="show one result">&nbsp;</div><div class="gsc-result-selector gsc-more-results" title="show more results">&nbsp;</div><div class="gsc-result-selector gsc-all-results" title="show all results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex="0" class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav=""></div>
+    <div class="dac-nav-sidebar" data-swap="" data-dynamic="false" data-transition-speed="300" data-dac-nav="">
+      <div data-swap-container="">
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-active" tabindex="0" data-swap-button="">
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">用户指南</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+            <ul id="nav">
+              <li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/intro/index.html" es-lang="Conocer Android Studio" id-lang="Mengenal Android Studio" ja-lang="Android Studio の概要" ko-lang="Android 스튜디오 만나보기" pt-br-lang="Conheça o Android Studio" zh-cn-lang="探索 Android Studio">探索 Android Studio</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/intro/migrate.html" es-lang="Realizar una migración a Studio" id-lang="Bermigrasi ke Studio" ja-lang="Eclipse から Android Studio への移行" ko-lang="Studio로 마이그레이션" pt-br-lang="Migre para o Studio" zh-cn-lang="迁移至 Studio">迁移至 Studio</a></li><li><a href="https://developer.android.com/studio/intro/studio-config.html" es-lang="Configurar el IDE" id-lang="Mengonfigurasi IDE" ja-lang="Android Studio の設定" ko-lang="IDE 구성" pt-br-lang="Configurar o IDE" zh-cn-lang="配置 IDE">配置 IDE</a></li><li><a href="https://developer.android.com/studio/intro/keyboard-shortcuts.html" es-lang="Combinaciones de teclas" id-lang="Pintasan Keyboard" ja-lang="キーボード ショートカット" ko-lang="단축키" pt-br-lang="Atalhos de teclado" zh-cn-lang="键盘快捷键">键盘快捷键</a></li><li><a href="https://developer.android.com/studio/intro/accessibility.html">Accessibility Features</a></li><li><a href="https://developer.android.com/studio/intro/update.html" es-lang="Actualizar el IDE y las herramientas" id-lang="Memperbarui IDE dan Alat" ja-lang="IDE および SDK ツールの更新" ko-lang="IDE 및 도구 업데이트" pt-br-lang="Atualizar IDE e ferramentas" zh-cn-lang="更新 IDE 和工具">更新 IDE 和工具</a></li></ul></li><li class="nav-section"><div class="nav-section-header empty"><a href="https://developer.android.com/studio/workflow.html">Workflow Basics</a></div></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/projects/index.html" es-lang="Administrar tu proyecto" id-lang="Mengelola Proyek Anda" ja-lang="プロジェクトの管理" ko-lang="프로젝트 관리" pt-br-lang="Gerenciar seu projeto" zh-cn-lang="管理项目">管理项目</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/projects/create-project.html" es-lang="Crear un proyecto" id-lang="Membuat Proyek" ja-lang="プロジェクトの作成" ko-lang="프로젝트 생성" pt-br-lang="Criar um projeto" zh-cn-lang="创建项目">创建项目</a></li><li><a href="https://developer.android.com/studio/projects/add-native-code.html" es-lang="Agregar código C y C++" id-lang="Menambahkan Kode C dan C++" ja-lang="C / C++ コードの追加" ko-lang="C 및 C++ 코드 추가" pt-br-lang="Adicionar código C e C++" zh-cn-lang="添加 C 和 C++ 代码">添加 C 和 C++ 代码</a></li><li><a href="https://developer.android.com/studio/projects/android-library.html" es-lang="Crear una biblioteca de Android" id-lang="Membuat Pustaka Android" ja-lang="Android ライブラリの作成" ko-lang="Android 라이브러리 생성" pt-br-lang="Criar uma biblioteca Android" zh-cn-lang="创建 Android 库">创建 Android 库</a></li><li><a href="https://developer.android.com/studio/projects/continuous-integration.html">Set Up Continuous Integration</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/write/index.html" es-lang="Cómo escribir tu app" id-lang="Menuliskan Aplikasi Anda" ja-lang="アプリの記述" ko-lang="앱 작성" pt-br-lang="Programe o aplicativo" zh-cn-lang="编写您的应用">编写您的应用</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/projects/templates.html" es-lang="Agregar código desde una plantilla" id-lang="Menambahkan Kode dari Template" ja-lang="テンプレートからのコード追加" ko-lang="템플릿에서 코드 추가" pt-br-lang="Adicionar código de um modelo" zh-cn-lang="从模板添加代码">从模板添加代码</a></li><li><a href="https://developer.android.com/studio/write/sample-code.html">Find Sample Code</a></li><li><a href="https://developer.android.com/studio/projects/add-app-module.html">Add a Module for a New Device</a></li><li><a href="https://developer.android.com/studio/write/create-java-class.html">Create a Java Class or Type</a></li><li><a href="https://developer.android.com/studio/write/add-resources.html">Add App Resources</a></li><li><a href="https://developer.android.com/studio/write/layout-editor.html" es-lang="Compilar una IU con un editor de diseño" id-lang="Membangun UI dengan Layout Editor" ja-lang="Layout Editor を用いた UI 作成" ko-lang="Layout Editor로 UI 빌드" pt-br-lang="Criar uma IU com o editor de layout" zh-cn-lang="使用布局编辑器构建 UI">使用布局编辑器构建 UI</a></li><li><a href="https://developer.android.com/studio/write/theme-editor.html" es-lang="Diseñar temas de apps" id-lang="Mendesain Tema Aplikasi" ja-lang="アプリテーマのデザイン" ko-lang="앱 테마 디자인" pt-br-lang="Projetar temas de aplicativo" zh-cn-lang="设计应用主题背景">设计应用主题背景</a></li><li><a href="https://developer.android.com/studio/write/vector-asset-studio.html" es-lang="Agregar gráficos vectoriales de varias densidades" id-lang="Menambahkan Grafis Vektor Multi-Kepadatan" ja-lang="さまざまな密度に適用可能なベクター グラフィックの追加" ko-lang="다중 밀도 벡터 그래픽 추가" pt-br-lang="Adicionar gráficos vetoriais de várias densidades" zh-cn-lang="添加多密度矢量图形">添加多密度矢量图形</a></li><li><a href="https://developer.android.com/studio/write/image-asset-studio.html" es-lang="Crear íconos con Image Asset Studio" id-lang="Membuat Ikon dengan Image Asset Studio" ja-lang="Image Asset Studio を用いたアイコン作成" ko-lang="Image Asset Studio로 아이콘 생성" pt-br-lang="Criar ícones com estúdio de ativos de imagem" zh-cn-lang="使用 Image Asset Studio 创建图标">使用 Image Asset Studio 创建图标</a></li><li><a href="https://developer.android.com/studio/write/draw9patch.html" es-lang="Crear mapas de bits de tamaño ajustable (9-Patch)" id-lang="Membuat Bitmap Yang Bisa Diubah Ukurannya (9-Patch)" ja-lang="リサイズ可能なビットマップ（9-patch）の作成" ko-lang="크기 조정 가능한 비트맵 생성(9-패치)" pt-br-lang="Criar bitmaps redimensionáveis (9-patch)" zh-cn-lang="创建可调整大小的位图 (9-Patch)">创建可调整大小的位图 (9-Patch)</a></li><li><a href="https://developer.android.com/studio/write/convert-webp.html">Create WebP Images</a></li><li><a href="https://developer.android.com/studio/write/translations-editor.html">Localize the UI</a></li><li><a href="https://developer.android.com/studio/write/app-link-indexing.html">Add Android App Links</a></li><li><a href="https://developer.android.com/studio/write/firebase.html">Connect to Firebase</a></li><li><a href="https://developer.android.com/studio/write/lint.html" es-lang="Mejora tu código con Lint" id-lang="Memperbaiki Kode Anda dengan Lint" ja-lang="Lint によるコードの改善" ko-lang="Lint로 코드 개선" pt-br-lang="Melhorar seu código com Lint" zh-cn-lang="使用 Lint 改进您的代码">使用 Lint 改进您的代码</a></li><li><a href="https://developer.android.com/studio/write/annotations.html" es-lang="Mejorar la inspección de código con anotaciones" id-lang="Memperbaiki Pemeriksaan Kode dengan Anotasi" ja-lang="アノテーションによるコード検査の改善" ko-lang="주석으로 코드 검사 개선" pt-br-lang="Melhorar a inspeção de código com anotações" zh-cn-lang="使用注解改进代码检查">使用注解改进代码检查</a></li><li><a href="https://developer.android.com/studio/write/tool-attributes.html">Tools Attributes Reference</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/run/index.html" es-lang="Compilar y ejecutar tu app" id-lang="Membuat dan Menjalankan Aplikasi Anda" ja-lang="アプリをビルドして実行する" ko-lang="앱 빌드 및 실행" pt-br-lang="Compilar e executar seu aplicativo" zh-cn-lang="构建和运行您的应用">构建和运行您的应用</a><span class="toggle-icon" tabindex="0"></span></div><ul><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/run/emulator.html" es-lang="Ejecutar apps en el emulador" id-lang="Menjalankan Aplikasi pada Emulator" ja-lang="Android Emulator 上でアプリを実行する" ko-lang="Emulator에서 앱 실행" pt-br-lang="Executar aplicativos no emulador" zh-cn-lang="在模拟器上运行应用">在模拟器上运行应用</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/run/managing-avds.html" es-lang="Crear y administrar dispositivos virtuales" id-lang="Membuat dan Mengelola Perangkat Virtual" ja-lang="仮想端末の作成と管理" ko-lang="가상 기기 생성 및 관리" pt-br-lang="Criar e gerenciar dispositivos virtuais" zh-cn-lang="创建和管理虚拟设备">创建和管理虚拟设备</a></li><li><a href="https://developer.android.com/studio/run/emulator-commandline.html">Start the Emulator from the Command Line</a></li><li><a href="https://developer.android.com/studio/run/emulator-console.html">Send Emulator Console Commands</a></li><li><a href="https://developer.android.com/studio/run/emulator-networking.html">Set Up Emulator Networking</a></li><li><a href="https://developer.android.com/studio/run/emulator-acceleration.html">Configure Hardware Acceleration</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/run/device.html" es-lang="Ejecutar apps en un dispositivo de hardware" id-lang="Menjalankan Aplikasi di Perangkat Keras" ja-lang="ハードウェア端末上でアプリを実行する" ko-lang="하드웨어 기기에서 앱 실행" pt-br-lang="Executar aplicativos em um dispositivo de hardware" zh-cn-lang="在硬件设备上运行应用">在硬件设备上运行应用</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/run/oem-usb.html" es-lang="Instalar controladores USB de OEM" id-lang="Memasang Driver USB OEM" ja-lang="OEM USB ドライバのインストール" ko-lang="OEM USB 드라이버 설치" pt-br-lang="Instalar drivers USB OEM" zh-cn-lang="安装原始设备制造商 USB 驱动程序">安装原始设备制造商 USB 驱动程序</a></li><li><a href="https://developer.android.com/studio/run/win-usb.html" es-lang="Obtener el controlador USB de Google" id-lang="Memperoleh Driver USB Google" ja-lang="Google USB ドライバを入手する" ko-lang="Google USB 드라이버 가져오기" pt-br-lang="Obter o driver USB do Google" zh-cn-lang="获取 Google USB 驱动程序">获取 Google USB 驱动程序</a></li></ul></li><li><a href="https://developer.android.com/studio/run/rundebugconfig.html" es-lang="Crear configuraciones de ejecución y depuración" id-lang="Membuat Konfigurasi Jalankan/Debug" ja-lang="実行、デバッグ構成の作成" ko-lang="실행/디버그 구성 생성" pt-br-lang="Cirar configurações de executar/depurar" zh-cn-lang="创建运行/调试配置">创建运行/调试配置</a></li><li><a href="https://developer.android.com/studio/build/building-cmdline.html" es-lang="Compilar tu app desde la línea de comandos" id-lang="Membangun Aplikasi Anda dari Baris Perintah" ja-lang="コマンドラインからのアプリ作成" ko-lang="명령줄에서 앱 빌드" pt-br-lang="Compilar seu aplicativo na linha de comando" zh-cn-lang="从命令行构建您的应用">从命令行构建您的应用</a></li></ul></li><li class="nav-section expanded"><div class="nav-section-header"><a href="https://developer.android.com/studio/build/index.html" es-lang="Configurar tu compilación" id-lang="Mengonfigurasi Pembangunan" ja-lang="ビルドの設定" ko-lang="빌드 구성" pt-br-lang="Configure sua compilação" zh-cn-lang="配置构建">配置构建</a><span class="toggle-icon" tabindex="0"></span></div><ul style="display: block;"><li><a href="https://developer.android.com/studio/build/application-id.html" es-lang="Establecer el ID de aplicación" id-lang="Menetapkan ID Aplikasi" ja-lang="アプリケーション ID の設定" ko-lang="애플리케이션 ID 설정" pt-br-lang="Definir o ID do aplicativo" zh-cn-lang="设置应用 ID">设置应用 ID</a></li><li><a href="https://developer.android.com/studio/build/dependencies.html">Add Build Dependencies</a></li><li><a href="https://developer.android.com/studio/build/optimize-your-build.html">Optimize Your Build Speed</a></li><li><a href="https://developer.android.com/studio/build/build-cache.html">Use Build Cache</a></li><li class="selected"><a href="https://developer.android.com/studio/build/build-variants.html" es-lang="Configurar variantes de compilación" id-lang="Mengonfigurasi Varian Pembangunan" ja-lang="ビルド バリアントの設定" ko-lang="빌드 변형 구성" pt-br-lang="Configure variantes de compilação" zh-cn-lang="配置构建变体">配置构建变体</a></li><li><a href="https://developer.android.com/studio/build/configure-apk-splits.html">Build Multiple APKs</a></li><li><a href="https://developer.android.com/studio/build/manifest-merge.html" es-lang="Combinar varios manifiestos" id-lang="Menggabungkan Beberapa Manifes" ja-lang="複数のマニフェストの統合" ko-lang="다중 매니페스트 병합" pt-br-lang="Mesclar vários manifestos" zh-cn-lang="合并多个清单">合并多个清单</a></li><li><a href="https://developer.android.com/studio/build/manifest-build-variables.html">Inject Build Variables into the Manifest</a></li><li><a href="https://developer.android.com/studio/build/shrink-code.html" es-lang="Reducir tu código y tus recursos" id-lang="Menciutkan Kode dan Sumber Daya Anda" ja-lang="コードとリソースの圧縮" ko-lang="코드 및 리소스 축소" pt-br-lang="Reduza seus códigos e recursos" zh-cn-lang="Shrink Your Code and Resources">Shrink Your Code and Resources</a></li><li><a href="https://developer.android.com/studio/build/multidex.html" es-lang="Configurar apps con métodos de más de 64K" id-lang="Mengonfigurasi Aplikasi dengan Lebih dari Metode 64K" ja-lang="64K を超えるメソッドを使用するアプリの設定" ko-lang="64K 이상의 메서드로 앱 구성" pt-br-lang="Configure aplicativos com mais de 64 K métodos" zh-cn-lang="配置方法数超过 64K 的应用">配置方法数超过 64K 的应用</a></li><li><a href="https://developer.android.com/studio/build/apk-analyzer.html">Analyze Your Build with APK Analyzer</a></li><li><a href="https://developer.android.com/studio/build/gradle-tips.html">Gradle Tips and Recipes</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/debug/index.html" es-lang="Depurar tu app" id-lang="Mendebug Aplikasi Anda" ja-lang="アプリのデバッグ" ko-lang="앱 디버깅" pt-br-lang="Depure seu aplicativo" zh-cn-lang="调试您的应用">调试您的应用</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/debug/am-logcat.html" es-lang="Escribir y visualizar registros" id-lang="Menuliskan dan Menampilkan Log" ja-lang="ログの出力と確認" ko-lang="로그 작성 및 보기" pt-br-lang="Escrever e ver registros" zh-cn-lang="写入和查看日志">写入和查看日志</a></li><li><a href="https://developer.android.com/studio/debug/stacktraces.html">Analyze a Stack Trace</a></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/debug/am-gpu-debugger.html">Examine OpenGL ES Apps</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/debug/am-gpu-debugger-trace.html">Capture a GPU Trace</a></li><li><a href="https://developer.android.com/studio/debug/am-gpu-debugger-analysis.html">Analyze a Trace in the GPU Debugger</a></li></ul></li><li><a href="https://developer.android.com/studio/debug/am-screenshot.html">Take a Screenshot</a></li><li><a href="https://developer.android.com/studio/debug/am-video.html">Record a Video</a></li><li><a href="https://developer.android.com/studio/debug/bug-report.html">Capture and Read Bug Reports</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/test/index.html" es-lang="Probar tu app" id-lang="Menguji Aplikasi Anda" ja-lang="アプリのテスト" ko-lang="앱 테스트" pt-br-lang="Testar o aplicativo" zh-cn-lang="测试应用">测试应用</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/test/command-line.html">Test from the Command Line</a></li><li><a href="https://developer.android.com/studio/test/espresso-test-recorder.html">Create UI Tests with Espresso Test Recorder</a></li><li><a href="https://developer.android.com/studio/test/monkey.html">UI/App Exerciser Monkey</a></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/test/monkeyrunner/index.html">monkeyrunner Reference</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/test/monkeyrunner/MonkeyDevice.html">MonkeyDevice</a></li><li><a href="https://developer.android.com/studio/test/monkeyrunner/MonkeyImage.html">MonkeyImage</a></li><li><a href="https://developer.android.com/studio/test/monkeyrunner/MonkeyRunner.html">MonkeyRunner</a></li></ul></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/index.html">Profile Your App</a><span class="toggle-icon" tabindex="0"></span></div><ul><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/android-monitor.html">Android Monitor Overview</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/am-basics.html">Begin with Android Monitor Basics</a></li></ul></li><li><a href="https://developer.android.com/studio/profile/am-memory.html">Optimize Memory Use with the Memory Monitor</a></li><li><a href="https://developer.android.com/studio/profile/investigate-ram.html" es-lang="Investiga el uso de RAM" id-lang="Menyelidiki Penggunaan RAM" ja-lang="RAM 使用状況の調査" ko-lang="RAM 사용량 조사" pt-br-lang="Investigar seu uso de RAM" zh-cn-lang="调查 RAM 使用情况">调查 RAM 使用情况</a></li><li><a href="https://developer.android.com/studio/profile/am-cpu.html">Tune CPU Use with the CPU Monitor</a></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/gpu.html">Perfect GPU Use</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/am-gpu.html">Analyze GPU Use with the GPU Monitor</a></li><li><a href="https://developer.android.com/studio/profile/dev-options-overdraw.html">Visualize GPU Overdraw</a></li><li><a href="https://developer.android.com/studio/profile/dev-options-rendering.html">Profile GPU Rendering</a></li></ul></li><li><a href="https://developer.android.com/studio/profile/am-network.html">Track Network Use with the Network Monitor</a></li><li><a href="https://developer.android.com/studio/profile/am-hprof.html">Analyze the Java Heap with the HPROF Viewer and Analyzer</a></li><li><a href="https://developer.android.com/studio/profile/am-allocation.html">Improve Memory Allocation with the Allocation Tracker</a></li><li><a href="https://developer.android.com/studio/profile/am-methodtrace.html">Study the Call Stack with the Method Tracer</a></li><li><a href="https://developer.android.com/studio/profile/am-sysinfo.html">Evaluate dumpsys System Information</a></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/battery-historian.html">Profile Battery Usage</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/battery-historian-charts.html">Understand Historian Charts</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/monitor.html">Android Device Monitor and DDMS Overview</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/ddms.html">Use DDMS</a></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/traceview.html">Trace Your Code Functions with Traceview</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/traceview-walkthru.html">Walk through Traceview</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/systrace.html">Analyze UI Performance with Systrace</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/systrace-walkthru.html">Walk through Systrace</a></li><li><a href="https://developer.android.com/studio/profile/systrace-commandline.html">Systrace Command Reference</a></li></ul></li><li><a href="https://developer.android.com/studio/profile/heap-viewer-walkthru.html">Inspect the Memory Heap with Heap Viewer</a></li><li><a href="https://developer.android.com/studio/profile/allocation-tracker-walkthru.html">Track Memory Allocation with Allocation Tracker</a></li><li><a href="https://developer.android.com/studio/profile/gltracer.html">Trace OpenGL Code</a></li></ul></li><li><a href="https://developer.android.com/studio/profile/hierarchy-viewer.html">Profile Your Layout with Hierarchy Viewer</a></li><li><a href="https://developer.android.com/studio/profile/pixel-perfect.html">Verify Your Design with Pixel Perfect</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/publish/index.html" es-lang="Publica tu app" id-lang="Mempublikasikan Aplikasi Anda" ja-lang="アプリの公開" ko-lang="앱 게시" pt-br-lang="Publicar o aplicativo" zh-cn-lang="发布您的应用">发布您的应用</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/publish/preparing.html" es-lang="Preparar el lanzamiento" id-lang="Mempersiapkan untuk Rilis" ja-lang="リリースの準備" ko-lang="릴리스 준비" pt-br-lang="Preparar para o lançamento" zh-cn-lang="准备发布">准备发布</a></li><li><a href="https://developer.android.com/studio/publish/versioning.html" es-lang="Cómo controlar la versión de tu app" id-lang="Menetapkan Versi Aplikasi Anda" ja-lang="アプリのバージョニング" ko-lang="앱 버전 지정" pt-br-lang="Controlar versões de aplicativos" zh-cn-lang="对您的应用进行版本控制">对您的应用进行版本控制</a></li><li><a href="https://developer.android.com/studio/publish/app-signing.html" es-lang="Firmar tu app" id-lang="Menandatangani Aplikasi Anda" ja-lang="アプリの署名" ko-lang="앱 서명" pt-br-lang="Assinar o aplicativo" zh-cn-lang="签署您的应用">签署您的应用</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/command-line/index.html">Command Line Tools</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/command-line/adb.html">adb</a></li><li><a href="https://developer.android.com/studio/command-line/apksigner.html">apksigner</a></li><li><a href="https://developer.android.com/studio/command-line/avdmanager.html">avdmanager</a></li><li><a href="https://developer.android.com/studio/command-line/bmgr.html">bmgr</a></li><li><a href="https://developer.android.com/studio/command-line/etc1tool.html">etc1tool</a></li><li><a href="https://developer.android.com/studio/command-line/jobb.html">jobb</a></li><li><a href="https://developer.android.com/studio/command-line/logcat.html">logcat</a></li><li><a href="https://developer.android.com/studio/command-line/mksdcard.html">mksdcard</a></li><li><a href="https://developer.android.com/studio/command-line/sdkmanager.html">sdkmanager</a></li><li><a href="https://developer.android.com/studio/command-line/zipalign.html">zipalign</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/releases/index.html">Release Notes</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/releases/sdk-tools.html">SDK Tools</a></li><li><a href="https://developer.android.com/studio/releases/emulator.html">Android Emulator</a></li><li><a href="https://developer.android.com/studio/releases/build-tools.html">SDK Build Tools</a></li><li><a href="https://developer.android.com/studio/releases/gradle-plugin.html">Android Plugin for Gradle</a></li><li><a href="https://developer.android.com/studio/releases/platforms.html">SDK Platform</a></li><li><a href="https://developer.android.com/studio/releases/platform-tools.html">SDK Platform Tools</a></li></ul></li><li class="nav-section"><div class="nav-section-header empty"><a href="https://developer.android.com/studio/troubleshoot.html">Troubleshoot</a></div></li><li class="nav-section"><div class="nav-section-header empty"><a href="https://developer.android.com/studio/known-issues.html">Known Issues</a></div></li>
+            </ul>
+            
+          
+        </div>
+        
+        
+  
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left">
+  <li class="dac-nav-item">
+    <a class="dac-nav-back-button back-to-dev" tabindex="0" es-lang="Volver al sitio para desarrolladores" id-lang="Kembali ke Pengembang" ja-lang="開発トップページに戻る" ko-lang="개발자로 돌아가기" pt-br-lang="Voltar aos Desenvolvedores" zh-cn-lang="返回到开发者主页" href="https://developer.android.com/develop/index.html">返回到开发者主页</a>
+  </li>
+  <li class="dac-nav-item download">
+    <a class="dac-nav-link" href="https://developer.android.com/studio/index.html" es-lang="Descargar" id-lang="Unduh" ja-lang="ダウンロード" ko-lang="다운로드" pt-br-lang="Download" zh-cn-lang="下载">下载</a>
+  </li>
+  <li class="dac-nav-item features">
+    <a class="dac-nav-link" href="https://developer.android.com/studio/features.html" es-lang="Funciones" id-lang="Fitur" ja-lang="機能" ko-lang="기능" pt-br-lang="Recursos" zh-cn-lang="功能">功能</a>
+  </li>
+  <li class="dac-nav-item guide">
+    <a class="dac-nav-link selected" href="https://developer.android.com/studio/intro/index.html" es-lang="Guía del usuario" id-lang="Panduan Pengguna" ja-lang="ユーザーガイド" ko-lang="사용자 가이드" pt-br-lang="Guia do usuário" zh-cn-lang="用户指南">用户指南</a><span class="dac-nav-link-forward" tabindex="0"><i class="dac-sprite dac-nav-forward"></i></span>
+  </li>
+  
+  <li class="dac-nav-item preview">
+    <a class="dac-nav-link" href="https://developer.android.com/studio/preview/index.html">Preview</a>
+  </li>
+  
+</ul>
+
+
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+      <div class="content-header">
+        <ul class="dac-header-crumbs dac-has-content"><li class="dac-header-crumbs-item"><a class="dac-header-crumbs-link" href="https://developer.android.com/studio/intro/index.html">User Guide</a></li><li class="dac-header-crumbs-item"><a class="dac-header-crumbs-link" href="https://developer.android.com/studio/build/index.html">Configure Your Build</a></li></ul>
+        <!-- Breadcrumb Setup -->
+        <script>$('.dac-nav-list').dacCurrentPage().dacCrumbs();</script>
+        <h1 itemprop="name">配置构建变体</h1>
+        
+      </div>
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="qv-wrapper">
+  <div id="qv">
+    <h2>
+      本文内容
+    </h2>
+
+    <ol>
+      <li>
+        <a href="https://developer.android.com/studio/build/build-variants.html#build-types">配置构建类型</a>
+      </li>
+
+      <li>
+        <a href="https://developer.android.com/studio/build/build-variants.html#product-flavors">配置产品风味</a> <ol>
+          <li>
+            <a href="https://developer.android.com/studio/build/build-variants.html#flavor-dimensions">组合多个产品风味</a>
+          </li>
+          <li>
+            <a href="https://developer.android.com/studio/build/build-variants.html#filter-variants">过滤变体</a>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <a href="https://developer.android.com/studio/build/build-variants.html#sourcesets">创建用于构建变体的源集</a> <ul>
+          <li>
+            <a href="https://developer.android.com/studio/build/build-variants.html#configure-sourcesets">更改默认源集配置</a>
+          </li>
+
+          <li>
+            <a href="https://developer.android.com/studio/build/build-variants.html#sourceset-build">使用源集构建</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://developer.android.com/studio/build/build-variants.html#dependencies">声明依赖项</a> <ul>
+          <li>
+            <a href="https://developer.android.com/studio/build/build-variants.html#configure-dependencies">配置依赖项</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://developer.android.com/studio/build/build-variants.html#signing">配置签署设置</a> <ul>
+          <li>
+            <a href="https://developer.android.com/studio/build/build-variants.html#wear-apps">签署 Android Wear 应用</a>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>
+      另请参阅
+    </h2>
+
+    <ul>
+      <li>
+        <a href="https://developer.android.com/studio/build/index.html">配置构建概览</a>
+      </li>
+
+      <li>
+        <a href="https://developer.android.com/studio/build/manifest-merge.html">合并清单</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<p>
+  此页面以<a href="https://developer.android.com/studio/build/index.html">配置构建概览</a>为基础，向您介绍如何配置构建变体，以便从同一个项目中创建应用的不同版本，以及如何正确地管理依赖项并签署配置。
+</p>
+
+<p>
+  每个<em>构建变体</em>都代表您可以为应用构建的一个不同版本。例如，您可能希望构建应用的免费版本（只提供有限的内容）和付费版本（提供更多内容）。您还可以针对不同的设备、根据 API 级别或其他设备变体构建应用的不同版本。然而，如果您希望根据设备 ABI 或屏幕密度构建不同的版本，则请改用 <a href="https://developer.android.com/studio/build/configure-apk-splits.html">APK 拆分</a>。
+</p>
+
+<p>
+  构建变体是 Gradle 按照<a href="https://developer.android.com/studio/build/build-variants.html#sourceset-build">特定规则集</a>合并在构建类型和产品风味中配置的设置、代码和资源所生成的结果。您并不直接配置构建变体，而是配置组成变体的构建类型和产品风味。
+</p>
+
+<p>
+  例如，一个“演示”<em>产品风味</em>可以指定不同的功能和设备要求，例如自定义源代码、资源和最低 API 级别，而“调试”<em>构建类型</em>则应用不同的构建和打包设置，例如调试选项和签署密钥。最终生成的构建变体是应用的“演示调试”版本，其既包含“演示”产品风味中包含的各种配置和资源，又包含“调试”构建类型和 <code>main/</code> 源集。
+</p>
+
+<h2 id="build-types" style="padding-bottom: 0px;">
+  配置构建类型
+</h2><hr>
+
+<p>
+  您可以在模块级 <code>build.gradle</code> 文件的 <code>android {}</code> 代码块内部创建和配置构建类型。当您创建新模块时，Android Studio 会自动为您创建调试和发布这两种构建类型。尽管调试构建类型不会出现在构建配置文件中，Android Studio 会为其配置 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html#com.android.build.gradle.internal.dsl.BuildType:debuggable"><code>debuggable true</code></a>。这样，您可以在安全的 Android 设备上调试应用并使用通用调试密钥库配置 APK 签署。
+</p>
+
+<p>
+  如果您希望添加或更改特定设置，您可以将调试构建类型添加到您的配置中。以下示例为调试构建类型指定了 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html#com.android.build.gradle.internal.dsl.BuildType:applicationIdSuffix"><code>applicationIdSuffix</code></a>，并配置了一个使用调试构建类型中的设置进行初始化的“jnidebug”构建类型。
+</p>
+
+<pre class="prettyprint"><span class="pln">android </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; defaultConfig </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; &nbsp; buildTypes </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; release </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; minifyEnabled </span><span class="kwd">true</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; proguardFiles getDefaultProguardFile</span><span class="pun">(</span><span class="str">'proguard-android.txt'</span><span class="pun">),</span><span class="pln"> </span><span class="str">'proguard-rules.pro'</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; debug </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; applicationIdSuffix </span><span class="str">".debug"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">/**<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* The 'initWith' property allows you to copy configurations from other build types,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* so you don't have to configure one from the beginning. You can then configure<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* just the settings you want to change. The following line initializes<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* 'jnidebug' using the debug build type, and changes only the<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* applicationIdSuffix and versionNameSuffix settings.<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*/</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; jnidebug </span><span class="pun">{</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// This copies the debuggable attribute and debug signing configurations.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; initWith debug<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; applicationIdSuffix </span><span class="str">".jnidebug"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jniDebuggable </span><span class="kwd">true</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+<p class="note">
+  <strong>注</strong>：当您对构建配置文件进行更改时，Android Studio 会要求您为项目同步新配置。要同步项目，您可以点击在做出更改后立即出现在通知栏中的 <strong>Sync Now</strong>，也可以点击工具栏中的 <strong>Sync Project</strong> <img src="./配置构建变体 _ Android Studio_files/toolbar-sync-gradle.png" alt="" class="inline-icon"> 。如果 Android Studio 通知配置出现错误，会显示 <strong>Messages</strong> 窗口，具体描述该问题。
+</p>
+
+<p>
+  如需详细了解对于构建类型可以配置的所有属性，请阅读<a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html">构建类型 DSL 参考</a>。
+</p>
+
+<h2 id="product-flavors" style="padding-bottom: 0px;">
+  配置产品风味
+</h2><hr>
+
+<p>
+  创建产品风味与创建构建类型类似：只需将它们添加到 <code>productFlavors {}</code> 代码块并配置您想要的设置。产品风味支持与 <code>defaultConfig</code> 相同的属性，这是因为 <code>defaultConfig</code> 实际上属于 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.ProductFlavor.html"><code>ProductFlavor</code></a> 类。这意味着，您可以在 <code>defaultConfig {}</code> 代码块中提供所有风味的基本配置，每种风味均可更改任何这些默认值，例如 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.ProductFlavor.html#com.android.build.gradle.internal.dsl.ProductFlavor:applicationId"><code>applicationId</code></a>。要详细了解应用 ID，请阅读<a href="https://developer.android.com/studio/build/application-id.html">设置应用 ID</a>。
+</p>
+
+<p class="note">
+  <strong>注</strong>：您仍需在 <code>main/</code> 清单文件中使用 <a href="https://developer.android.com/guide/topics/manifest/manifest-element.html#package"><code>package</code></a> 属性指定程序包名称。您还必须在源代码中使用此程序包名称引用 R 类或者解析任何相关的 Activity 或服务注册。这样，您可以使用 <code>applicationId</code> 为每个产品风味分配一个唯一的 ID，以用于打包和分发，而不必更改您的源代码。
+</p>
+
+<p>
+  以下代码示例创建了一个“演示”和“完整”产品风味，以赋予其自己的 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.ProductFlavor.html#com.android.build.gradle.internal.dsl.ProductFlavor:applicationIdSuffix"><code>applicationIdSuffix</code></a> 和 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.ProductFlavor.html#com.android.build.gradle.internal.dsl.ProductFlavor:versionNameSuffix"> <code>versionNameSuffix</code></a>：
+</p>
+
+<pre class="prettyprint"><span class="pln">android </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; defaultConfig </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; &nbsp; buildTypes </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; &nbsp; productFlavors </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; demo </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; applicationIdSuffix </span><span class="str">".demo"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; versionNameSuffix </span><span class="str">"-demo"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; full </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; applicationIdSuffix </span><span class="str">".full"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; versionNameSuffix </span><span class="str">"-full"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+<p class="note">
+  <strong>注</strong>：要利用 Google Play 中的<a href="https://developer.android.com/google/play/publishing/multiple-apks.html">多 APK 支持</a>分发您的应用，请为所有变体分配相同的 <code>applicationId</code> 值并为每个变体分配一个不同的 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.ProductFlavor.html#com.android.build.gradle.internal.dsl.ProductFlavor:versionCode"><code>versionCode</code></a>。要在 Google Play 中以独立应用的形式分发应用的不同变体，您需要为每个变体分配一个不同的 <code>applicationId</code>。
+</p>
+
+<p>
+  在创建和配置您的产品风味之后，在通知栏中点击 <strong>Sync Now</strong>。在同步完成后，Gradle 会根据您的构建类型和产品风味自动创建构建变体，并按照 <code>&lt;product-flavor&gt;&lt;Build-Type&gt;</code> 的格式命名这些变体。例如，如果您创建了“演示”和“完整”这两种产品风味并保留默认的“调试”和“发布”构建类型，Gradle 将创建以下构建变体：
+</p>
+
+<ul>
+  <li>
+    <em>演示调试</em>
+  </li>
+
+  <li>
+    <em>演示发布</em>
+  </li>
+
+  <li>
+    <em>完整调试</em>
+  </li>
+
+  <li>
+    <em>完整发布</em>
+  </li>
+</ul>
+
+<p>
+  您可以将构建变体更改为您要构建并运行的任何变体，只需转到 <strong>Build</strong> &gt; <strong>Select Build Variant</strong>，然后从下拉菜单中选择一个变体。然而，要开始自定义每个构建变体及其功能和资源，您需要了解如何创建和管理源集。
+</p>
+
+<h3 id="flavor-dimensions">
+  组合多个产品风味
+</h3>
+
+<p>
+  某些情况下，您可能希望组合多个产品风味中的配置。例如，您可能希望基于 API 级别为“完整”和“演示”产品风味创建不同的配置。为此，您可以通过适用于 Gradle 的 Android 插件创建产品风味组，称为风味维度。构建您的应用时，Gradle 会将您定义的每个风味维度中的产品风味配置与构建类型配置组合来创建最终构建变体。Gradle 不会组合属于相同风味维度的产品风味。
+</p>
+
+<p class="note">
+  <b>提示</b>：要根据 ABI 和屏幕密度创建不同版本的应用，您应<a href="https://developer.android.com/studio/build/configure-apk-splits.html">配置 APK 拆分</a>，而不是使用产品风味。
+</p>
+
+<p>
+  下面的代码示例使用 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.AppExtension.html#com.android.build.gradle.AppExtension:flavorDimensions(java.lang.String[])"><code>flavorDimensions</code></a> 属性创建一个“模式”风味维度以组织“完整”和“演示”产品风味，以及一个“api”风味维度以基于 API 级别组织产品风味配置：
+</p>
+
+<pre class="prettyprint"><span class="pln">android </span><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; buildTypes </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; debug </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; &nbsp; release </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; </span><span class="com">// Specifies the flavor dimensions you want to use. The order in which you</span><span class="pln"><br>&nbsp; </span><span class="com">// list each dimension determines its priority, from highest to lowest,</span><span class="pln"><br>&nbsp; </span><span class="com">// when Gradle merges variant sources and configurations. You must assign</span><span class="pln"><br>&nbsp; </span><span class="com">// each product flavor you configure to one of the flavor dimensions.</span><span class="pln"><br>&nbsp; flavorDimensions </span><span class="str">"api"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"mode"</span><span class="pln"><br><br>&nbsp; productFlavors </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; demo </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// Assigns this product flavor to the "mode" flavor dimension.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; dimension </span><span class="str">"mode"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; full </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; dimension </span><span class="str">"mode"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Configurations in the "api" product flavors override those in "mode"</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// flavors and the defaultConfig {} block. Gradle determines the priority</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// between flavor dimensions based on the order in which they appear next</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// to the flavorDimensions property above--the first dimension has a higher</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// priority than the second, and so on.</span><span class="pln"><br>&nbsp; &nbsp; minApi24 </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; dimension </span><span class="str">"api"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; minSdkVersion </span><span class="str">'24'</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// To ensure the target device receives the version of the app with</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// the highest compatible API level, assign version codes in increasing</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// value with API level. To learn more about assigning version codes to</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// support app updates and uploading to Google Play, read </span><a href="https://developer.android.com/google/play/publishing/multiple-apks.html#HowItWorks"><span class="com">Multiple APK Support</span></a><span class="pln"><br>&nbsp; &nbsp; &nbsp; versionCode </span><span class="lit">30000</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">defaultConfig</span><span class="pun">.</span><span class="pln">versionCode<br>&nbsp; &nbsp; &nbsp; versionNameSuffix </span><span class="str">"-minApi24"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; minApi23 </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; dimension </span><span class="str">"api"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; minSdkVersion </span><span class="str">'23'</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; versionCode </span><span class="lit">20000</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">defaultConfig</span><span class="pun">.</span><span class="pln">versionCode<br>&nbsp; &nbsp; &nbsp; versionNameSuffix </span><span class="str">"-minApi23"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; minApi21 </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; dimension </span><span class="str">"api"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; minSdkVersion </span><span class="str">'21'</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; versionCode </span><span class="lit">10000</span><span class="pln"> &nbsp;</span><span class="pun">+</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">defaultConfig</span><span class="pun">.</span><span class="pln">versionCode<br>&nbsp; &nbsp; &nbsp; versionNameSuffix </span><span class="str">"-minApi21"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="pun">...</span></pre>
+
+<p>
+  Gradle 创建的构建变体数量等于每个风味维度中的风味数量与您配置的构建类型数量的乘积。在 Gradle 为每个构建变体或对应 APK 命名时，属于较高优先级风味维度的产品风味首先显示，之后是较低优先级维度的产品风味，再之后是构建类型。以上面的构建配置为例，Gradle 可以使用以下命名方案创建总共 12 个构建变体：
+</p>
+
+<dl>
+    <dd>构建变体：<code>[minApi24, minApi23, minApi21][Demo, Full][Debug, Release]</code></dd>
+    <dd>对应 APK：<code>app-[minApi24, minApi23, minApi21]-[demo, full]-[debug, release].apk</code></dd>
+  <dt>例如，</dt>
+    <dd>构建变体：<code>minApi24DemoDebug</code></dd>
+    <dd>对应 APK：<code>app-minApi24-demo-debug.apk</code></dd>
+</dl>
+
+<p>
+  除了可以为各个产品风味和构建变体创建源集目录外，您也可以为每个产品风味<em>组合</em>创建源集目录。例如，您可以创建 Java 源并将其添加到 <code>src/demoMinApi24/java/</code> 目录中，Gradle 仅会在构建组合了这两种产品风味的变体时使用这些源。与属于各个产品风味的源集相比，您为产品风味组合创建的源集拥有更高的优先级。要详细了解源集和 Gradle 如何合并源，请阅读有关如何<a href="https://developer.android.com/studio/build/build-variants.html#sourcesets">创建源集</a>的部分。
+</p>
+
+<h3 id="filter-variants">
+  过滤变体
+</h3>
+
+<p>
+  Gradle 会为您配置的产品风味与构建类型的每个可能的组合创建构建变体。不过，某些特定的构建变体在您的项目环境中并不必要，也可能没有意义。您可以在模块级 <code>build.gradle</code> 文件中创建一个变体过滤器，以移除某些构建变体配置。
+</p>
+
+<p>
+  以上一部分中的构建配置为例，假设您计划为演示版本的应用仅支持 API 级别 23 和更高级别。您可以使用 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.api.variant.VariantFilter.html"><code>variantFilter {}</code></a> 代码块过滤出组合了“minApi21”和“演示”产品风味的所有构建变体配置：
+</p>
+
+<pre class="prettyprint"><span class="pln">android </span><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; buildTypes </span><span class="pun">{...}</span><span class="pln"><br><br>&nbsp; flavorDimensions </span><span class="str">"api"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"mode"</span><span class="pln"><br>&nbsp; productFlavors </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; demo </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; &nbsp; full </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; &nbsp; minApi24 </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; &nbsp; minApi23 </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; &nbsp; minApi21 </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; variantFilter </span><span class="pun">{</span><span class="pln"> variant </span><span class="pun">-&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">def</span><span class="pln"> names </span><span class="pun">=</span><span class="pln"> variant</span><span class="pun">.</span><span class="pln">flavors</span><span class="pun">*.</span><span class="pln">name<br>&nbsp; &nbsp; &nbsp; </span><span class="com">// To check for a certain build type, use variant.buildType.name == "</span><var><span class="com">&lt;buildType&gt;</span></var><span class="com">"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">names</span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"minApi21"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> names</span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"demo"</span><span class="pun">))</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Gradle ignores any variants that satisfy the conditions above.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; setIgnore</span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="pun">...</span></pre>
+
+<p>
+  在您向构建配置添加变体过滤器并点击通知栏中的 <b>Sync Now</b> 后，Gradle 将忽略满足您指定的条件的任何构建变体，在您点击菜单栏中的 <b>Build &gt; Select Build Variant</b>（或工具窗口栏中的 <b>Build Variants</b>）时，这些构建变体将不会再 <img src="./配置构建变体 _ Android Studio_files/window-monitor.png" class="inline-icon" alt=""> 显示在下拉菜单中。
+</p>
+
+<h2 id="sourcesets" style="padding-bottom: 0px;">
+  创建源集
+</h2><hr>
+
+<p>
+  默认情况下，Android Studio 会创建 <code>main/</code><a href="https://developer.android.com/studio/build/index.html#sourcesets"> 源集</a>和目录，用于存储您要在所有构建变体之间共享的一切资源。然而，您可以创建新的源集来控制 Gradle 要为特定的构建类型、产品风味（以及使用<a href="https://developer.android.com/studio/build/build-variants.html#flavor-dimensions">风味维度</a>时的产品风味组合）和构建变体编译和打包的确切文件。例如，您可以在 <code>main/</code> 源集中定义基本的功能，使用产品风味源集针对不同的客户更改应用的品牌，或者仅针对使用调试构建类型的构建变体包含特殊的权限和日志记录功能。
+</p>
+
+<p>
+  Gradle 要求您按照与 <code>main/</code> 源集类似的特定方式组织源集文件和目录。例如，Gradle 要求您的“调试”构建类型所特定的 Java 类文件位于 <code>src/debug/java/</code> 目录中。
+</p>
+
+<p>
+  适用于 Gradle 的 Android 插件提供了一项有用的 Gradle 任务，可向您展示如何针对每种构建类型、产品风味和构建变体组织您的文件。例如，报告的以下部分描述了 Gradle 要求在何处能找到“调试”构建类型的特定文件：
+</p>
+
+<pre class="no-pretty-print">------------------------------------------------------------
+Project :app
+------------------------------------------------------------
+
+...
+
+debug
+----
+Compile configuration: compile
+build.gradle name: android.sourceSets.debug
+Java sources: [app/src/debug/java]
+Manifest file: app/src/debug/AndroidManifest.xml
+Android resources: [app/src/debug/res]
+Assets: [app/src/debug/assets]
+AIDL sources: [app/src/debug/aidl]
+RenderScript sources: [app/src/debug/rs]
+JNI sources: [app/src/debug/jni]
+JNI libraries: [app/src/debug/jniLibs]
+Java-style resources: [app/src/debug/resources]
+</pre>
+
+<p>
+  要为您的构建配置生成和查看此报告，请继续如下操作：
+</p>
+
+<ol>
+  <li>点击 IDE 窗口右侧的 <strong>Gradle</strong> <img src="./配置构建变体 _ Android Studio_files/as-gradle.png" alt="" class="inline-icon"> 。
+  </li>
+
+  <li>导航至 <strong>MyApplication &gt; Tasks &gt; android</strong> 并双击 <strong>sourceSets</strong>。
+  </li>
+
+  <li>要查看报告，请点击 IDE 窗口底部的 <strong>Gradle Console</strong> <img src="./配置构建变体 _ Android Studio_files/as-gradlebutton.png" alt="" class="inline-icon"> 。
+  </li>
+</ol>
+
+<p class="note">
+  <strong>注</strong>：此报告还向您展示了如何为您希望用来运行应用测试的文件组织源集，例如 <code>test/</code> 和 <code>androidTest/</code> <a href="https://developer.android.com/studio/test/index.html#sourcesets">测试源集</a>。
+</p>
+
+<p>
+  当您创建新的构建变体时，Android Studio 不会为您创建源集目录，但会为您提供几个选项，帮助您创建。例如，要为“调试”构建类型只创建 <code>java/</code> 目录，请执行以下操作：
+</p>
+
+<ol>
+  <li>打开 <strong>Project</strong> 窗格并从窗格顶端的下拉菜单中选择 <strong>Project</strong> 视图。
+  </li>
+
+  <li>导航至 <code>MyProject/app/src/</code>。
+  </li>
+
+  <li>右键点击 <code>src</code> 目录并选择 <strong>New</strong> &gt; <strong>Folder</strong> &gt; <strong>Java Folder</strong>。
+  </li>
+
+  <li>从 <strong>Target Source Set</strong> 旁边的下拉菜单中，选择 <strong>debug</strong>。
+  </li>
+
+  <li>点击 <strong>Finish</strong>。
+  </li>
+</ol>
+
+<p>
+  Android Studio 将会为您的调试构建类型创建源集目录，然后在该目录内部创建 <code>java/</code> 目录。或者，在针对特定的构建变体向您的项目中添加新文件时，您也可以让 Android Studio 为您创建目录。例如，要为“调试”构建类型创建 XML 值文件：
+</p>
+
+<ol>
+  <li>在相同的 <strong>Project</strong> 窗格中，右键点击 <code>src</code> 目录并选择 <strong>New</strong> &gt; <strong>XML</strong> &gt; <strong>Values XML File</strong>。
+  </li>
+
+  <li>为 XML 文件输入名称或保留默认名称。
+  </li>
+
+  <li>从 <strong>Target Source Set</strong> 旁边的下拉菜单中，选择 <strong>debug</strong>。
+  </li>
+
+  <li>点击 <strong>Finish</strong>。
+  </li>
+</ol>
+
+<p>
+  由于“调试”构建类型被指定为目标源集，Android Studio 会在创建 XML 文件时自动创建必要的目录。最终的目录结构看上去应该类似于图 2。
+</p>
+
+<img src="./配置构建变体 _ Android Studio_files/debug-directories_2-1_2x.png" alt="" width="370">
+<p class="img-caption">
+  <strong>图 2.</strong> 调试构建类型的新源集目录。
+</p>
+
+<p>
+  按照同样的方法，您还可以为产品风味创建源集目录（例如 <code>src/demo/</code>），为构建变体创建源集目录（例如 <code>src/demoDebug/</code>）。此外，您还可以创建针对特定构建变体的测试源集，例如 <code>src/androidTestDemoDebug/</code>。如需了解更多信息，请转至<a href="https://developer.android.com/studio/test/index.html#sourcesets">测试源集</a>。
+</p>
+
+<h3 id="configure-sourcesets">
+  更改默认源集配置
+</h3>
+
+<p>
+  如果您的源未组织到 Gradle 期望的默认源集文件结构中（如上面的<a href="https://developer.android.com/studio/build/build-variants.html#sourcesets">创建源集</a>部分中所述），您可以使用 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.api.AndroidSourceSet.html"><code>sourceSets {}</code></a> 代码块更改 Gradle 希望为源集的每个组件收集文件的位置。您不需要重新定位文件；只需要为 Gradle 提供相对于模块级 <code>build.gradle</code> 文件的路径，Gradle 应当可以在此路径下为每个源集组件找到文件。要了解您可以配置哪些组件，以及是否可以将其映射到多个文件或目录，请阅读<a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.api.AndroidSourceSet.html">适用于 Gradle 的 Android 插件参考</a>。
+</p>
+
+<p>
+  下面的代码示例可以将 <code>app/other/</code> 目录中的源映射到 <code>main</code> 源集的某些组件，并更改 <code>androidTest</code> 源集的根目录。
+</p>
+
+<pre class="prettyprint"><span class="pln">android </span><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; sourceSets </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Encapsulates configurations for the main source set.</span><span class="pln"><br>&nbsp; &nbsp; main </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// Changes the directory for Java sources. The default directory is</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// 'src/main/java'.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; java</span><span class="pun">.</span><span class="pln">srcDirs </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">'other/java'</span><span class="pun">]</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// If you list multiple directories, Gradle uses all of them to collect</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// sources. Because Gradle gives these directories equal priority, if</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// you define the same resource in more than one directory, you get an</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// error when merging resources. The default directory is 'src/main/res'.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; res</span><span class="pun">.</span><span class="pln">srcDirs </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">'other/res1'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'other/res2'</span><span class="pun">]</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// </span><b><span class="com">Note:</span></b><span class="com"> You should avoid specifying a directory which is a parent to one</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// or more other directories you specify. For example, avoid the following:</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// res.srcDirs = ['other/res1', 'other/res1/layouts', 'other/res1/strings']</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// You should specify either only the root 'other/res1' directory, or only the</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// nested 'other/res1/layouts' and 'other/res1/strings' directories.</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// For each source set, you can specify only one Android manifest.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// By default, Android Studio creates a manifest for your main source</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// set in the src/main/ directory.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; manifest</span><span class="pun">.</span><span class="pln">srcFile </span><span class="str">'other/AndroidManifest.xml'</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Create additional blocks to configure other source sets.</span><span class="pln"><br>&nbsp; &nbsp; androidTest </span><span class="pun">{</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// If all the files for a source set are located under a single root</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// directory, you can specify that directory using the setRoot property.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// When gathering sources for the source set, Gradle looks only in locations</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// relative to the root directory you specify. For example, after applying the</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// configuration below for the androidTest source set, Gradle looks for Java</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// sources only in the src/tests/java/ directory.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; setRoot </span><span class="str">'src/tests'</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="pun">...</span></pre>
+
+<h3 id="sourceset-build">
+  使用源集构建
+</h3>
+
+<p>
+  您可以使用源集目录包含您希望仅针对某些配置打包的代码和资源。例如，如果您要构建“演示调试”构建变体（它是“演示”产品风味和“调试”构建类型的合体），Gradle 会查看这些目录并赋予以下优先级顺序：
+</p>
+
+<ol>
+  <li>
+    <code>src/demoDebug/</code><em>（构建变体源集）</em>
+  </li>
+
+  <li>
+    <code>src/debug/</code><em>（构建类型源集）</em>
+  </li>
+
+  <li>
+    <code>src/demo/</code><em>（产品风味源集）</em>
+  </li>
+
+  <li>
+    <code>src/main/</code><em>（主源集）</em>
+  </li>
+</ol>
+
+<p class="note">
+  <b>注</b>：如果您<a href="https://developer.android.com/studio/build/build-variants.html#flavor-dimensions">组合多个产品风味</a>，产品风味之间的优先级将由它们所属的风味维度决定。在列示具有 <a href="http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.AppExtension.html#com.android.build.gradle.AppExtension:flavorDimensions(java.lang.String[])"><code>android.flavorDimensions</code></a> 属性的风味维度时，所列示的第一个风味维度中的产品风味比第二个维度中的产品风味拥有更高的优先级，以此类推。此外，与属于各个产品风味的源集相比，您为产品风味组合创建的源集拥有更高的优先级。
+</p>
+
+<p>
+  上面列出的顺序决定了在 Gradle 合并代码和资源时哪个源集具有较高的优先级。由于 <code>demoDebug/</code> 源集目录很可能包含特定于该构建变体的文件，如果 <code>demoDebug/</code> 包含在 <code>debug/</code> 中也有定义的文件，Gradle 将使用 <code>demoDebug/</code> 源集中的文件。同样，Gradle 会为构建类型和产品风味源集中的文件赋予比 <code>main/</code> 中相同文件更高的优先级。Gradle 在应用以下构建规则时会考虑此优先级顺序：
+</p>
+
+<ul>
+  <li>一起编译 <code>java/</code> 目录中的所有源代码以生成单一的输出。 <p class="note">
+      <strong>注</strong>：对于给定的构建变体，如果找到两个或两个以上定义同一 Java 类的源集目录，Gradle 就会引发一个构建错误。例如，在构建调试 APK 时，您不能同时定义 <code>src/debug/Utility.java</code> 和 <code>src/main/Utility.java</code>。这是因为 Gradle 会在构建过程中检查这两个目录并引发“duplicate class”错误。如果针对不同的构建类型需要不同版本的 <code>Utility.java</code>，您可以让每个构建类型定义其自己的文件版本，而不将其包含在 <code>main/</code> 源集中。
+    </p>
+  </li>
+
+  <li>所有清单合并为单个清单。将按照上述列表中的相同顺序指定优先级。也就是说，某个构建类型的清单设置会替换某个产品风味的清单设置，依此类推。如需了解更多信息，请阅读<a href="https://developer.android.com/studio/build/manifest-merge.html">合并清单</a>。
+  </li>
+
+  <li>同样，<code>values/</code> 目录中的文件也会合并在一起。如果两个文件同名，例如存在两个 <code>strings.xml</code> 文件，将按照上述列表中的相同顺序指定优先级。也就是说，在构建类型源集中的文件中定义的值将会替换产品风味中同一文件中定义的值，依此类推。
+  </li>
+
+  <li><code>res/</code> 和 <code>asset/</code> 目录中的资源将打包到一起。如果两个或两个以上的源集中定义有同名资源，将按照上述列表中的相同顺序指定优先级。
+  </li>
+
+  <li>最后，在构建 APK 时，Gradle 会为随库模块依赖项包含的资源和清单分配最低的优先级。
+  </li>
+</ul>
+
+<h2 id="dependencies" style="padding-bottom: 0px;">
+  声明依赖项
+</h2><hr>
+
+<p>
+  下面的示例可以在 <code>app/</code> 模块的 <code>build.gradle</code> 文件中声明三种不同类型的直接依赖项：
+</p>
+
+<pre class="prettyprint"><span class="pln">android </span><span class="pun">{...}</span><span class="pln"><br></span><span class="pun">...</span><span class="pln"><br>dependencies </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// The 'compile' configuration tells Gradle to add the dependency to the</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// compilation classpath and include it in the final package.</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Dependency on the "mylibrary" module from this project</span><span class="pln"><br>&nbsp; &nbsp; compile project</span><span class="pun">(</span><span class="str">":mylibrary"</span><span class="pun">)</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Remote binary dependency</span><span class="pln"><br>&nbsp; &nbsp; compile </span><span class="str">'com.android.support:appcompat-v7:25.3.1'</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Local binary dependency</span><span class="pln"><br>&nbsp; &nbsp; compile fileTree</span><span class="pun">(</span><span class="pln">dir</span><span class="pun">:</span><span class="pln"> </span><span class="str">'libs'</span><span class="pun">,</span><span class="pln"> include</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'*.jar'</span><span class="pun">])</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+<p>
+  下面逐一介绍了每种直接依赖项。
+</p>
+
+<dl>
+  <dt>
+    <strong>模块依赖项</strong>
+  </dt>
+
+  <dd>
+    <code>compile project(':mylibrary')</code> 行声明了一个名为“mylibrary”的<a href="https://developer.android.com/studio/projects/android-library.html">本地 Android 库模块</a>作为依赖项，并要求构建系统在构建应用时编译并包含该本地模块。
+  </dd>
+
+  <dt>
+    <strong>远程二进制依赖项</strong>
+  </dt>
+
+  <dd>
+    <code>compile 'com.android.support:appcompat-v7:25.3.1'</code> 行会通过指定其 JCenter 坐标，针对 <a href="https://developer.android.com/topic/libraries/support-library/index.html">Android 支持库</a>的 25.3.1 版本声明一个依赖项。默认情况下，Android Studio 会将项目配置为使用顶级构建文件中的 JCenter 存储区。当您将项目与构建配置文件同步时，Gradle 会自动从 JCenter 中抽取依赖项。或者，您也可以通过<a href="https://developer.android.com/studio/intro/update.html#sdk-manager">使用 SDK 管理器</a>下载和安装特定的依赖项。
+  </dd>
+
+  <dt>
+    <strong>本地二进制依赖项</strong>
+  </dt>
+
+  <dd>
+    <code>compile fileTree(dir: 'libs', include: ['*.jar'])</code> 行告诉构建系统在编译类路径和最终的应用软件包中包含 <code>app/libs/</code> 目录内的任何 JAR 文件。如果您有模块需要本地二进制依赖项，请将这些依赖项的 JAR 文件复制到项目内部的 <code>&lt;moduleName&gt;/libs</code> 中。
+  </dd>
+</dl>
+
+<p>
+  该模块的某些直接依赖项可能会有其自己的依赖项，这称为该模块的<em>传递依赖项</em>。Gradle 将会自动为您收集并添加这些传递依赖项，而不必手动逐一加以声明。适用于 Gradle 的 Android 插件提供了一项有用的 Gradle 任务，可为每个构建变体和<a href="https://developer.android.com/studio/test/index.html#sourcesets">测试源集</a>生成依赖项树，因此，您可以轻松地可视化模块的直接和传递依赖项。要生成此报告，请继续如下操作：
+</p>
+
+<ol>
+  <li>点击 IDE 窗口右侧的 <strong>Gradle</strong> <img src="./配置构建变体 _ Android Studio_files/as-gradle.png" alt="" class="inline-icon"> 。
+  </li>
+
+  <li>导航至 <strong>MyApplication &gt; Tasks &gt; android</strong> 并双击 <strong>androidDependencies</strong>。
+  </li>
+
+  <li>要查看报告，请点击 IDE 窗口底部的 <strong>Gradle Console</strong> <img src="./配置构建变体 _ Android Studio_files/as-gradlebutton.png" alt="" class="inline-icon"> 。
+  </li>
+</ol>
+
+<p>
+  以下示例报告显示了调试构建变体的依赖项树，并包含前一示例中的本地模块依赖项和远程依赖项。
+</p>
+
+<pre class="no-pretty-print">Executing tasks: [androidDependencies]
+:app:androidDependencies
+debug
+/**
+ * Both the library module dependency and remote binary dependency are listed
+ * with their transitive dependencies.
+ */
++--- MyApp:mylibrary:unspecified
+|    \--- com.android.support:appcompat-v7:25.3.1
+|         +--- com.android.support:animated-vector-drawable:25.3.1
+|         |    \--- com.android.support:support-vector-drawable:25.3.1
+|         |         \--- com.android.support:support-v4:25.3.1
+|         |              \--- LOCAL: internal_impl-25.3.1.jar
+|         +--- com.android.support:support-v4:25.3.1
+|         |    \--- LOCAL: internal_impl-25.3.1.jar
+|         \--- com.android.support:support-vector-drawable:25.3.1
+|              \--- com.android.support:support-v4:25.3.1
+|                   \--- LOCAL: internal_impl-25.3.1.jar
+\--- com.android.support:appcompat-v7:25.3.1
+     +--- com.android.support:animated-vector-drawable:25.3.1
+     |    \--- com.android.support:support-vector-drawable:25.3.1
+     |         \--- com.android.support:support-v4:25.3.1
+     |              \--- LOCAL: internal_impl-25.3.1.jar
+     +--- com.android.support:support-v4:25.3.1
+     |    \--- LOCAL: internal_impl-25.3.1.jar
+     \--- com.android.support:support-vector-drawable:25.3.1
+          \--- com.android.support:support-v4:25.3.1
+               \--- LOCAL: internal_impl-25.3.1.jar
+...
+</pre>
+
+<p>
+  如需了解在 Gradle 中管理依赖项的详细信息，请参阅《Gradle 用户指南》中的<a href="http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html">依赖项管理基础知识</a>。
+</p>
+
+<h3 id="configure-dependencies">
+  配置依赖项
+</h3>
+
+<p>
+  您可以使用特定的配置关键字告诉 Gradle 如何以及何时使用某个依赖项，例如前述示例中的 <code>compile</code> 关键字。下面介绍了您可以用来配置依赖项的一些关键字：
+</p>
+
+<dl>
+  <dt>
+    <code>compile</code>
+  </dt>
+
+  <dd>
+    指定编译时依赖项。Gradle 将此配置的依赖项添加到类路径和应用的 APK。这是默认配置。
+  </dd>
+
+  <dt>
+    <code>apk</code>
+  </dt>
+
+  <dd>
+    指定 Gradle 需要将其与应用的 APK 一起打包的仅运行时依赖项。您可以将此配置与 JAR 二进制依赖项一起使用，而不能与其他库模块依赖项或 AAR 二进制依赖项一起使用。
+  </dd>
+
+  <dt>
+    <code>provided</code>
+  </dt>
+
+  <dd>
+    指定 Gradle <em>不</em>与应用的 APK 一起打包的编译时依赖项。如果运行时无需此依赖项，这将有助于缩减 APK 的大小。您可以将此配置与 JAR 二进制依赖项一起使用，而不能与其他库模块依赖项或 AAR 二进制依赖项一起使用。
+  </dd>
+</dl>
+
+<p>
+  此外，您可以通过将构建变体或测试源集的名称应用于配置关键字，为特定的构建变体或<a href="https://developer.android.com/studio/test/index.html#sourcesets">测试源集</a>配置依赖项，如下例所示。
+</p>
+
+<pre class="prettyprint"><span class="pln">dependencies </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Adds specific library module dependencies as compile time dependencies</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// to the fullRelease and fullDebug build variants.</span><span class="pln"><br>&nbsp; &nbsp; fullReleaseCompile project</span><span class="pun">(</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">':library'</span><span class="pun">,</span><span class="pln"> configuration</span><span class="pun">:</span><span class="pln"> </span><span class="str">'release'</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; fullDebugCompile project</span><span class="pun">(</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">':library'</span><span class="pun">,</span><span class="pln"> configuration</span><span class="pun">:</span><span class="pln"> </span><span class="str">'debug'</span><span class="pun">)</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Adds a compile time dependency for local tests.</span><span class="pln"><br>&nbsp; &nbsp; testCompile </span><span class="str">'junit:junit:4.12'</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Adds a compile time dependency for the test APK.</span><span class="pln"><br>&nbsp; &nbsp; androidTestCompile </span><span class="str">'com.android.support.test.espresso:espresso-core:2.2.2'</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+<h2 id="signing" style="padding-bottom: 0px;">
+  配置签署设置
+</h2><hr>
+
+<p>
+  除非您为发布构建显式定义签署配置，否则，Gradle 不会签署发布构建的 APK。您可以轻松创建发布密钥并<a href="https://developer.android.com/studio/publish/app-signing.html#release-mode">使用 Android Studio 签署发布构建类型</a>。
+</p>
+
+<p>
+  要使用 Gradle 构建配置为您的发布构建类型手动配置签署配置：
+</p>
+
+<ol>
+  <li>
+    <em>创建密钥库。</em><strong>密钥库</strong>是一个二进制文件，它包含一组私钥。您必须将密钥库存放在安全可靠的地方。
+  </li>
+
+  <li>
+    <em>创建私钥。</em><strong>私钥</strong>代表将通过应用识别的实体，如某个人或某家公司。
+  </li>
+
+  <li>
+    <p>
+      将签署配置添加到模块级 <code>build.gradle</code> 文件中：
+    </p>
+
+<pre class="prettyprint"><span class="pun">...</span><span class="pln"><br>android </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; defaultConfig </span><span class="pun">{...}</span><span class="pln"><br>&nbsp; &nbsp; signingConfigs </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; release </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; storeFile file</span><span class="pun">(</span><span class="str">"myreleasekey.keystore"</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; storePassword </span><span class="str">"password"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; keyAlias </span><span class="str">"MyReleaseKey"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; keyPassword </span><span class="str">"password"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; buildTypes </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; release </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; signingConfig signingConfigs</span><span class="pun">.</span><span class="pln">release<br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+  </li>
+
+</ol>
+
+<p>
+  要生成签署的 APK，请从菜单栏中选择 <strong>Build &gt; Generate Signed APK</strong>。现在，<code>app/build/apk/app-release.apk</code> 中的软件包已使用您的发布密钥进行签署。
+</p>
+
+<p class="note">
+  <strong>注</strong>：将发布密钥和密钥库的密码放在构建文件中并不安全。作为替代方案，您可以将此构建文件配置为通过环境变量获取这些密码，或让构建流程提示您输入这些密码。
+</p>
+
+<p>
+  要通过环境变量获取这些密码：
+</p>
+
+<pre class="prettyprint"><span class="pln">storePassword </span><span class="typ">System</span><span class="pun">.</span><span class="pln">getenv</span><span class="pun">(</span><span class="str">"KSTOREPWD"</span><span class="pun">)</span><span class="pln"><br>keyPassword </span><span class="typ">System</span><span class="pun">.</span><span class="pln">getenv</span><span class="pun">(</span><span class="str">"KEYPWD"</span><span class="pun">)</span></pre>
+
+<p>
+  要让构建流程在您要从命令行调用此构建时提示您输入这些密码：
+</p>
+
+<pre class="prettyprint"><span class="pln">storePassword </span><span class="typ">System</span><span class="pun">.</span><span class="pln">console</span><span class="pun">().</span><span class="pln">readLine</span><span class="pun">(</span><span class="str">"\nKeystore password: "</span><span class="pun">)</span><span class="pln"><br>keyPassword </span><span class="typ">System</span><span class="pun">.</span><span class="pln">console</span><span class="pun">().</span><span class="pln">readLine</span><span class="pun">(</span><span class="str">"\nKey password: "</span><span class="pun">)</span></pre>
+
+<p>
+  在完成此流程后，您可以分发您的应用并在 Google Play 上发布它。
+</p>
+
+<p class="warning">
+  <strong>警告</strong>：将密钥库和私钥存放在安全可靠的地方，并确保您为其创建了安全的备份。如果您将应用发布到 Google Play，随后丢失了您用于签署应用的密钥，那么，您将无法向您的应用发布任何更新，因为您必须始终使用相同的密钥签署应用的所有版本。
+</p>
+
+<h3 id="wear-apps">
+  签署 Android Wear 应用
+</h3>
+
+<p>
+  发布 Android Wear 应用时，请将穿戴式设备应用打包到手持类应用中，因为用户无法直接在穿戴式设备上浏览和安装应用。这两个应用均必须进行签署。如需有关打包和签署 Android Wear 应用的更多信息，请参阅<a href="https://developer.android.com/training/wearables/apps/packaging.html">打包穿戴式设备应用</a>。
+</p>
+
+
+    </div>
+
+    
+
+    
+    
+
+
+
+
+<div class="wrap">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of2">
+        <div class="dac-footer-contact">
+          <a class="dac-footer-contact-link" id="newsletter" data-modal-toggle="newsletter" title="Newsletter">Newsletter</a>
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog">Blog</a>
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+        </div>
+      </div>
+      <div class="col-1of2 dac-footer-reachout">
+        <div class="dac-footer-social">
+          <a class="dac-button-social dac-youtube dac-footer-social-link" href="https://www.youtube.com/user/androiddevelopers" title="Android Developers on YouTube"><i class="dac-sprite dac-youtube"></i><span class="hide-text">Android Developers on YouTube</span></a>
+          <a class="dac-button-social dac-gplus dac-footer-social-link" href="https://plus.google.com/+AndroidDevelopers" title="Android Developers on Google+"><i class="dac-sprite dac-gplus"></i><span class="hide-text">Android Developers on Google+</span></a>
+          <a class="dac-button-social dac-twitter dac-footer-social-link" href="https://twitter.com/AndroidDev" title="Android Developers on Twitter"><i class="dac-sprite dac-twitter"></i><span class="hide-text">Android Developers on Twitter</span></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator">
+      
+      <p class="dac-footer-copyright">
+        Except as noted, this content is
+        licensed under <a href="http://creativecommons.org/licenses/by/2.5/">
+        Creative Commons Attribution 2.5</a>. For details and
+        restrictions, see the <a href="https://developer.android.com/license.html">Content
+        License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      <a href="https://www.android.com/" title="Android.com">Android.com</a>
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+        <a href="https://developer.android.com/console/index.html" title="Google Play Developer Console">Google Play Developer Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    <!-- TODO(akassay) Update all DAC js to use the class instead of the id b/30368561 -->
+    <form class="devsite-utility-footer-language" id="setlang" action="https://developer.android.com/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="qs-UCB8MuM0UaFaofzx2dGGr9GFsY2XLaThodfPFhFQ6MTQ5MjQwOTk5Njk4OTY4MA">
+      <input type="hidden" name="next" value="/studio/build/build-variants.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id">
+            Bahasa Indonesia
+          </option>
+          
+          <option value="en">
+            English
+          </option>
+          
+          <option value="es">
+            español
+          </option>
+          
+          <option value="es-419">
+            Español (América Latina)
+          </option>
+          
+          <option value="pt-br">
+            Português Brasileiro
+          </option>
+          
+          <option value="vi">
+            Tiếng Việt
+          </option>
+          
+          <option value="ru">
+            Русский
+          </option>
+          
+          <option value="ja">
+            日本語
+          </option>
+          
+          <option value="zh-cn" selected="selected">
+            简体中文
+          </option>
+          
+          <option value="zh-tw">
+            繁體中文
+          </option>
+          
+          <option value="ko">
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast="">
+    <div class="dac-toast-wrap">
+      This site uses cookies to store your preferences for site-specific language and display options.
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter="" data-swap="" class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle=""></button>
+        </div>
+        <div class="dac-swap" data-swap-container="">
+          <section class="dac-swap-section dac-active dac-down">
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">获取最新的 Android 开发者资讯和提示，助您在 Google Play 上取得成功。</h2>
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* 必填字段</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">太棒了！</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container="">
+        <section class="dac-swap-section dac-active dac-left">
+          <iframe name="dac-newsletter-iframe" src="./配置构建变体 _ Android Studio_files/saved_resource.html" style="display: none;"></iframe><form action="https://docs.google.com/forms/d/1QgnkzbEJIDu9lMEea0mxqWrXUJu0oBCLD7ar23V0Yys/formResponse" class="dac-form" method="post" target="dac-newsletter-iframe">
+            <input type="hidden" name="entry.935454734" data-newsletter-language="" value="Simplified Chinese (简体中文)">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">全名</label>
+                      <input type="text" class="dac-form-input" name="entry.1357890476" id="newsletter-full-name" required="">
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">电子邮件地址</label>
+                      <input type="email" class="dac-form-input" name="entry.472100832" id="newsletter-email" required="">
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">公司/开发者名称</label>
+                      <input type="text" class="dac-form-input" name="entry.1664780309" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">您的某个 Play 商店应用网址</label>
+                      <input type="url" class="dac-form-input" name="entry.47013838" id="newsletter-play-store" required="">
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <legend class="dac-form-legend"><span data-t="newsletter.business.label">哪一项能够最准确地描述您的业务？</span><span class="dac-form-required">*</span>
+                    </legend>
+                    <div class="dac-form-radio-group">
+                      <input type="radio" value="Apps" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-app" required="">
+                      <label for="newsletter-business-type-app" class="dac-form-radio-button"></label>
+                      <label for="newsletter-business-type-app" class="dac-form-label" data-t="newsletter.business.apps">应用</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="radio" value="Games" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-games" required="">
+                      <label for="newsletter-business-type-games" class="dac-form-radio-button"></label>
+                      <label for="newsletter-business-type-games" class="dac-form-label" data-t="newsletter.business.games">游戏</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="radio" value="Apps and Games" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-appsgames" required="">
+                      <label for="newsletter-business-type-appsgames" class="dac-form-radio-button"></label>
+                      <label for="newsletter-business-type-appsgames" class="dac-form-label" data-t="newsletter.business.both">应用和游戏</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="entry.732309842" id="newsletter-add" required="" value="Add me to the mailing list for the monthly newsletter and occasional emails about development and Google Play opportunities.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside"><span data-t="newsletter.confirmMailingList">将我添加到邮寄名单，以便接收每月简报以及不定期发送的关于开发和 Google Play 商机的电子邮件。</span><span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="entry.2045036090" id="newsletter-terms" required="" value="I acknowledge that the information provided in this form will be subject to Google&#39;s privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html="">我确认自己了解在此表单中提供的信息受 <a href="https://www.google.com/intl/zh-CN/policies/privacy/" target="_blank">Google</a> 隐私权政策的约束。</span><span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">您已成功订阅最新的 Android 开发者资讯和提示。</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle=""></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">Browse this site in Simplified Chinese (简体中文)?</h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">You requested a page in Simplified Chinese (简体中文), but your language preference for this site is Simplified Chinese (简体中文).</p>
+                  <p id="resetLangCta">Would you like to change your language preference and browse this site in Simplified Chinese (简体中文)? If you want to change your language preference later, use the language menu at the bottom of each page.</p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="https://developer.android.com/studio/build/build-variants.html#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle="">Change Language</button>
+            </a>
+            <a href="https://developer.android.com/studio/build/build-variants.html#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle="">Not Now</button>
+            </a>
+          </footer>
+        
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle=""></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            This class requires API level <span class="api-level"></span>
+            or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+
+      <p>This doc is hidden because your selected API level for the
+      documentation is <span class="selected-level"></span>. You can change the
+      documentation API level with the selector above the left navigation.</p>
+
+      <p>For more information about specifying the API level your app requires,
+      read <a href="https://developer.android.com/training/basics/supporting-devices/platforms.html">Supporting
+      Different Platform Versions</a>.</p>
+
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="https://developer.android.com/studio/build/build-variants.html#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok" data-modal-toggle="">
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="./配置构建变体 _ Android Studio_files/ytblogger_lists_unified.js" defer=""></script>
+  <script src="./配置构建变体 _ Android Studio_files/android_metadata_en.js" defer=""></script>
+  
+  <script src="./配置构建变体 _ Android Studio_files/lists.js" defer=""></script>
+  <script src="./配置构建变体 _ Android Studio_files/gcm_lists.js" defer=""></script>
+  <script src="./配置构建变体 _ Android Studio_files/gms_lists.js" defer=""></script>
+  <script src="./配置构建变体 _ Android Studio_files/lists(1).js" defer=""></script>
+  <script src="./配置构建变体 _ Android Studio_files/lists(2).js" defer=""></script>
+  <script src="./配置构建变体 _ Android Studio_files/lists(3).js" defer=""></script>
+  <script src="./配置构建变体 _ Android Studio_files/saved_resource"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_zh-cn.js?v=2017041706" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script><script src="./配置构建变体 _ Android Studio_files/android_metadata_zh-cn.js" defer=""></script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+    })(jQuery);
+  </script>
+
+  
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a one-minute survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve Android tools and documentation.
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank" href="https://goo.gl/forms/kV7MoyD2dvcWkd5N2">Sure</a>
+      <a class="dac-button" href="https://developer.android.com/studio/build/build-variants.html#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+
+
+<table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 2px; display: none; top: 3px; position: absolute; left: -1px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>
