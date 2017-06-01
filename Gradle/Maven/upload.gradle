@@ -1,0 +1,37 @@
+apply plugin : 'maven'
+
+def libGroupId = GROUPID
+def libArtifactId = ARTIFACTID
+def libVersion = VERSION+"-SNAPSHOT"
+def libDescription = DESCRIPTION
+def libType = 'aar'
+def doUpload = Boolean.parseBoolean(UPLOAD)
+
+uploadArchives {
+     repositories {
+        mavenDeployer {
+            snapshotRepository(url: MAVEN_SNAPSHOT_URL) {
+                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+            }
+            repository(url: MAVEN_URL) {
+                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+            }
+            pom.project {
+                 groupId libGroupId
+                 artifactId libArtifactId
+                 version libVersion
+                 packaging libType
+                 description libDescription
+            }
+        }
+     }
+}
+
+uploadArchives.dependsOn('assembleRelease')
+uploadArchives.doLast {
+    println "======\nPublished to repo: ${libGroupId}:${libArtifactId}:${libVersion}"
+    println "Description : ${libDescription}\n======"
+}
+uploadArchives.onlyIf {
+    doUpload
+}

@@ -197,8 +197,8 @@ sup {
 
 <h3>3. <a href="https://zhidao.baidu.com/question/1693352926446133428.html">引用冲突:不同的本地module引用相同的开源库</a></h3>
 
-<p>在老版本的Android Studio中,如果library module使用compile的方式引用开源库，最后会打包到aar，
-后来更新2.x以上之后就没有这个问题了,使用compile或者provided都可以</p>
+<p>在老版本的Android Studio中,如果library module使用compile的方式引用maven上开源库，最后会打包到aar，
+后来更新2.x以上之后就没有这个问题了,使用compile或者provided都可以，对于jar包还是需要使用provided</p>
 
 <h3>4. Android Studio有提示的错误</h3>
 
@@ -360,6 +360,8 @@ println(sum(3, 4))
 
 <p>其实目的就是公有库的使用，类似于jcenter的功能，只是不想给外网能够使用，那我们自己建立一个maven库就可以了，那以后通过compile服务器的库，就可以了。也便于其他各个项目去依赖。形成公司自有的代码库。</p>
 
+<p>同时起到一定代码保密性的功能，只有需要对库进行修改才会去co库项目，否则平常的使用过程，一般开发人员并不会去关注他的源代码。只要使用就可以了。如果做的更好一点，就是每个库都单独分开svn地址，权限区分开来，只有授权的用户才能co,并且maven发布的aar包是混淆之后的。</p>
+
 <ol>
 <li><a href="nexus-latest-bundle.tar.gz">下载nexus开源项目</a></li>
 <li>运行bin/nexus start</li>
@@ -422,5 +424,15 @@ println(sum(3, 4))
 <p>在查找资料的过程中，发现极客学院免费的百科，可以比较全面的补充知识面。</p>
 
 <p><a href="http://wiki.jikexueyuan.com/list/android/">http://wiki.jikexueyuan.com/list/android/</a></p>
+
+<p>学习路线:</p>
+
+<p><a href="http://blog.csdn.net/singwhatiwanna/article/details/49560409">http://blog.csdn.net/singwhatiwanna/article/details/49560409</a></p>
+
+<p><a href="http://blog.csdn.net/luoshengyang/article/details/8923485">http://blog.csdn.net/luoshengyang/article/details/8923485</a></p>
+
+<p>源码阅读:</p>
+
+<p><a href="https://github.com/anggrayudi/android-hidden-api">https://github.com/anggrayudi/android-hidden-api</a></p>
 </body>
 </html>

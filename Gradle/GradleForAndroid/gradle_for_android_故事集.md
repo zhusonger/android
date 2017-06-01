@@ -13,7 +13,7 @@
 1. 找到gradle-wrapper.properties，位置在 项目根目录->gradle->wrapper->gradle-wrapper.properties
 2. 复制distributionUrl的地址,从浏览器打开，注意把其中的"\"去掉才能下载，如下载gradle-2.14.1-all.zip
 3. 把下载好的压缩包放到放到gradle系统目录,macos在~/.gradle/wrapper/dists/gradle-x.x.x-all
-4. 把压缩包放到gradle-2.14.1-all这个文件夹目录下的随机生成的文件夹下即可
+4. 把压缩包放到gradle-2.14.1-all这个文件夹目录下的随机生成的文件夹下即可  
 5. 重启Android Studio，试试看，不行自己搜去，谢谢
 
 ### 2. [引用本地aar](http://stormzhang.com/android/2015/03/01/android-reference-local-aar/)
@@ -34,8 +34,8 @@
 
 ### 3. [引用冲突:不同的本地module引用相同的开源库](https://zhidao.baidu.com/question/1693352926446133428.html)
 
-在老版本的Android Studio中,如果library module使用compile的方式引用开源库，最后会打包到aar，
-后来更新2.x以上之后就没有这个问题了,使用compile或者provided都可以
+在老版本的Android Studio中,如果library module使用compile的方式引用maven上开源库，最后会打包到aar，
+后来更新2.x以上之后就没有这个问题了,使用compile或者provided都可以，对于jar包还是需要使用provided
 
 ### 4. Android Studio有提示的错误
 
@@ -185,6 +185,8 @@ Data Binding入门篇 : <http://blog.zhaiyifan.cn/2016/06/16/android-new-project
 
 其实目的就是公有库的使用，类似于jcenter的功能，只是不想给外网能够使用，那我们自己建立一个maven库就可以了，那以后通过compile服务器的库，就可以了。也便于其他各个项目去依赖。形成公司自有的代码库。
 
+同时起到一定代码保密性的功能，只有需要对库进行修改才会去co库项目，否则平常的使用过程，一般开发人员并不会去关注他的源代码。只要使用就可以了。如果做的更好一点，就是每个库都单独分开svn地址，权限区分开来，只有授权的用户才能co,并且maven发布的aar包是混淆之后的。
+
 1. [下载nexus开源项目](nexus-latest-bundle.tar.gz)
 2. 运行bin/nexus start
 3. 查看自己ip，浏览器打开ip:8081/nexus,端口可以修改conf/nexus.properties，默认admin帐号是admin/admin123
@@ -242,4 +244,15 @@ uploadArchives {
 
 <http://wiki.jikexueyuan.com/list/android/>
 
+学习路线:
+
+<http://blog.csdn.net/singwhatiwanna/article/details/49560409>
+
+<http://blog.csdn.net/luoshengyang/article/details/8923485>
+
+源码阅读:
+
+<https://github.com/anggrayudi/android-hidden-api>
+
+<http://stormzhang.com/2017/01/16/top-10-android-library-of-2016/>
 
