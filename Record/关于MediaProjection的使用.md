@@ -21,3 +21,5 @@ java.lang.SecurityException: Invalid media projection
 
 5. 对于有效的MediaProjection，是可以多次调用createVirtualDisplay来创建多个虚拟display的。
 
+6. 对MediaProjection进行注册，在其他mediaproject被请求生效时,会回调onStop接口，可以利用他来关闭所有的虚拟display与标记为无效的MediaProjection
+
