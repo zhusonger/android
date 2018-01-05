@@ -23,7 +23,8 @@
 ## Framework
 
 * android系统层的知识
-* 隐藏api: <https://github.com/anggrayudi/android-hidden-api>* 
+* 触手录重构的项目架构
+* 隐藏api: <https://github.com/anggrayudi/android-hidden-api>
 
 ## Git
 * Git相关知识
