@@ -23,10 +23,11 @@
 ## Framework
 
 * android系统层的知识
-* 隐藏api: <https://github.com/anggrayudi/android-hidden-api>
+* 隐藏api: <https://github.com/anggrayudi/android-hidden-api>* 
 
 ## Git
 * Git相关知识
+* 删除大文件: <http://www.cnblogs.com/shines77/p/3460274.html>
 
 
 
