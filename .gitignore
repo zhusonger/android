@@ -40,3 +40,6 @@ captures/
 *.jks
 
 .DS_Store
+
+# Zip file
+*.zip

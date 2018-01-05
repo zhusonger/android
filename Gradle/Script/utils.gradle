@@ -1,0 +1,381 @@
+apply plugin : 'maven'
+//---------------Compile Start----------------------//
+ext {
+    junit='4.12'
+    espresso='2.2.2'
+    support='25.3.1'
+    robotium='5.6.3'
+    ultra_ptr='1.0.11'
+    okhttp3='3.8.0'
+    retrofit2='2.3.0' // exclude com.squareup.okhttp3:okhttp
+    rxjava2='2.1.0'
+    rxandroid2='2.0.1' // exclude io.reactivex.rxjava2:rxjava
+    adapter_rxjava2='2.3.0' //exclude com.squareup.retrofit2:retrofit
+    // & io.reactivex.rxjava2:rxjava
+    uil='1.9.4'
+    fresco='1.1.0' // exclude com.squareup.okhttp3:okhttp
+    permission='1.0.7'
+    galleryfinal='1.4.8.7'
+    toolsfinal='1.1.5'
+    qiniu='7.2.2'
+    kpswitch='1.6.0'
+    gif='1.2.1'
+    fab='1.6.1'
+    zxing='3.2.1'
+    multidex='1.0.1'
+    nineoldandroids="2.4.0"
+    crashreport='latest.release'
+    nativecrashreport='latest.release'
+    symtabfileuploader='latest.release'
+    stickyheadersrecyclerview='0.4.2'
+
+    //-SNAPSHOT
+    // modules
+    compileSdkVersion=25
+    buildToolsVersion='25.0.3'
+    minSdkVersion=14
+    targetSdkVersion=25
+    // base module
+    analyse='1.1.2'
+    common='1.3.7-SNAPSHOT'
+    http='1.1.19-SNAPSHOT'
+    image='1.1.5'
+    imclient='1.2.4-SNAPSHOT'
+    photoselector='1.2.5'
+    poll='1.1.0'
+    record='1.1.5-SNAPSHOT'
+    rxjava='1.1.2'
+    share='1.1.6-SNAPSHOT'
+    rtc='1.2.2-agora-2.0.2-SNAPSHOT'
+    // chushou base module
+    hermes='1.1.0'
+    zues='1.1.0'
+
+    // business module
+    live='1.2.5-SNAPSHOT'
+    microom='1.3.3'
+    mine='1.1.2'
+    player='1.1.0'
+    rec='1.2.5-SNAPSHOT'
+    zone='1.2.5-SNAPSHOT'
+    mixbusiness='1.0.4-SNAPSHOT'
+    commonCompiles=this.&commonCompiles
+    printErr=System.err.&println
+
+    imagePublishName='frescoRelease'
+    imageArtifactId='fresco'    // used for maven
+//    imagePublishName='uilRelease'
+//    imageArtifactId='uil' // used for maven
+
+    playerPublishName='ijkRelease'
+    playerArtifactId='ijk'
+
+    chushouluPublishName='chushouluRelease'
+    chushouluvariantGroupId='tv.chushou.record'
+
+    chushouPublishName='chushouRelease'
+    chushouvariantGroupId='tv.chushou.record.chushou'
+
+//    defaultPublishName='chushouluRelease'
+//    variantGroupId='tv.chushou.record'    // used for maven
+    defaultPublishName='chushouRelease'
+    variantGroupId='tv.chushou.record.chushou' // used for maven
+}
+
+// 多渠道的模块 common/live/mine/rec/zone/imclient/share, 需要2边都上传一下
+def uploadModule = ['live'/*'common','analyse', 'http', 'imclient', 'photoselector', 'poll',
+                    'record', 'rxjava', 'share', 'rtc', 'live', 'mine' ,'rec', 'zone', 'player',
+                    'image','mixbusiness'*/ ]
+
+def commonCompiles (String... libs) {
+    printErr "commonCompiles start"
+    if (null == libs) {
+        return null
+    }
+    libs.each {
+        println "compile library : " + it
+        if (it == 'junit') {
+            dependencies.testCompile "junit:junit:$rootProject.junit"
+        } else if (it == 'espresso') {
+            dependencies.androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.espresso", {
+                exclude group: 'com.android.support', module: 'support-annotations'
+            })
+        } else if (it =='robotium') {
+            dependencies.androidTestCompile("com.jayway.android.robotium:robotium-solo:$rootProject.robotium")
+        } else if (it == 'appcompat-v7') {
+            dependencies.compile "com.android.support:appcompat-v7:$rootProject.ext.support"
+        } else if (it == 'recyclerview-v7') {
+            dependencies.compile "com.android.support:recyclerview-v7:$rootProject.ext.support"
+        } else if (it == 'ultra-ptr') {
+            dependencies.compile "in.srain.cube:ultra-ptr:$rootProject.ext.ultra_ptr"
+        } else if (it == 'okhttp3') {
+            dependencies.compile "com.squareup.okhttp3:okhttp:$rootProject.okhttp3"
+        } else if (it == 'retrofit2') {
+            dependencies.compile ("com.squareup.retrofit2:retrofit:$rootProject.retrofit2", {
+                exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+            })
+        } else if (it == 'rxjava2') {
+            dependencies.compile ("io.reactivex.rxjava2:rxjava:$rootProject.rxjava2")
+        } else if (it == 'rxandroid2') {
+            dependencies.compile ("io.reactivex.rxjava2:rxandroid:$rootProject.rxandroid2", {
+                exclude group: 'io.reactivex.rxjava2', module: 'rxjava'
+            })
+        } else if (it == 'adapter-rxjava2') {
+            dependencies.compile ("com.squareup.retrofit2:adapter-rxjava2:$rootProject.adapter_rxjava2", {
+                exclude group: 'io.reactivex.rxjava2', module: 'rxjava'
+                exclude group: 'com.squareup.retrofit2', module: 'retrofit'
+            })
+        } else if (it == 'permission') {
+            dependencies.compile "com.yanzhenjie:permission:$rootProject.permission"
+        } else if (it == 'galleryfinal') {
+            dependencies.compile "cn.finalteam:galleryfinal:$rootProject.galleryfinal"
+        } else if (it == 'toolsfinal') {
+            dependencies.compile "cn.finalteam:toolsfinal:$rootProject.toolsfinal"
+        } else if (it == 'qiniu') {
+            dependencies.compile "com.qiniu:qiniu-android-sdk:$rootProject.qiniu"
+        } else if (it == 'kpswitch') {
+            dependencies.compile "cn.dreamtobe.kpswitch:library:$rootProject.kpswitch"
+        } else if (it == 'gif') {
+            dependencies.compile "pl.droidsonroids.gif:android-gif-drawable:$rootProject.gif"
+        } else if (it == 'fab') {
+            dependencies.compile "com.github.clans:fab:$rootProject.fab"
+        } else if (it == 'zxing') {
+            dependencies.compile "com.google.zxing:core:$rootProject.zxing"
+        } else if (it == 'multidex') {
+            dependencies.compile "com.android.support:multidex:$rootProject.multidex"
+        } else if (it == 'design') {
+            dependencies.compile "com.android.support:design:$rootProject.ext.support"
+        } else if (it == 'nineoldandroids') {
+            dependencies.compile "com.nineoldandroids:library:$rootProject.ext.nineoldandroids"
+        } else if (it == 'crashreport') {
+            dependencies.compile "com.tencent.bugly:crashreport:$rootProject.ext.crashreport"
+        } else if (it == 'nativecrashreport') {
+            dependencies.compile "com.tencent.bugly:nativecrashreport:$rootProject.ext.nativecrashreport"
+        } else if (it == 'fresco') {
+            dependencies.compile "com.facebook.fresco:fresco:$rootProject.ext.fresco"
+            dependencies.compile "com.facebook.fresco:animated-base:$rootProject.ext.fresco"
+            dependencies.compile "com.facebook.fresco:imagepipeline-okhttp3:$rootProject.ext.fresco"
+            dependencies.compile "com.facebook.fresco:animated-gif:$rootProject.ext.fresco"
+        } else if (it == 'uil') {
+            dependencies.compile "com.nostra13.universalimageloader:universal-image-loader:$rootProject.uil"
+        } else if (it == 'ijkplayer') {
+            //required enough for most devices
+            dependencies.compile 'tv.danmaku.ijk.media:ijkplayer-java:0.4.4.1'
+            dependencies.compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.4.4.1'
+            dependencies.compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.4.4.1'
+        } else if (it == 'stickyheadersrecyclerview') {
+            dependencies.compile "com.timehop.stickyheadersrecyclerview:library:$rootProject.ext.stickyheadersrecyclerview@aar"
+        }
+    }
+    printErr "commonCompiles finish"
+}
+
+//---------------Compile End----------------------//
+
+
+
+//---------------Upload Start----------------------//
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            snapshotRepository(url: MAVEN_SNAPSHOT_URL) {
+                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+            }
+            repository(url: MAVEN_URL) {
+                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+            }
+        }
+    }
+}
+
+// 触手tv目录下的
+//def uploadModule = ['zues', 'hermes', 'microom','mixbusiness']
+
+def uploadConfig = [
+        // base module
+        'analyse':
+                ['groupId': 'tv.chushou.record',
+                 'artifactId': 'analyse',
+                 'version': rootProject.ext.analyse,
+                 'type': 'aar',
+                 'description': 'chushoulu android analyse library:' +
+                         'denpend from maven'
+                ],
+        'imclient':
+                ['groupId': rootProject.ext.variantGroupId,
+                 'artifactId': 'imclient',
+                 'version': rootProject.ext.imclient,
+                 'type': 'aar',
+                 'description': 'chushoulu android imclient library:' +
+                         'last version fro microom'
+                ],
+        'common':
+                ['groupId': rootProject.ext.variantGroupId,
+                 'artifactId': 'common',
+                 'version': rootProject.ext.common,
+                 'type': 'aar',
+                 'description': 'chushoulu android common library:' +
+                         'scheme activity'
+                ],
+        'photoselector':
+                ['groupId': 'tv.chushou.record',
+                 'artifactId': 'photoselector',
+                 'version': rootProject.ext.photoselector,
+                 'type': 'aar',
+                 'description': 'chushoulu android photoselector library:' +
+                         'photo selector ui'
+                ],
+        'http':
+                ['groupId': 'tv.chushou.record',
+                 'artifactId': 'http',
+                 'version': rootProject.ext.http,
+                 'type': 'aar',
+                 'description': 'chushoulu android http library:' +
+                         'denpend from maven'
+                ],
+        'image':
+                ['groupId': 'tv.chushou.record.image',
+                 'artifactId': rootProject.ext.imageArtifactId,
+                 'version': rootProject.ext.image,
+                 'type': 'aar',
+                 'description': 'chushoulu android image library' +
+                         'denpend from maven'
+                ],
+        'poll':
+                ['groupId': 'tv.chushou.record',
+                 'artifactId': 'poll',
+                 'version': rootProject.ext.poll,
+                 'type': 'aar',
+                 'description': 'chushoulu android poll library:' +
+                         'denpend from maven'
+                ],
+        'record':
+                ['groupId': 'tv.chushou.record',
+                 'artifactId': 'core',
+                 'version': rootProject.ext.record,
+                 'type': 'aar',
+                 'description': 'chushoulu android record core library' +
+                         'denpend from maven'
+                ],
+        'rxjava':
+                ['groupId': 'tv.chushou.record',
+                 'artifactId': 'rxjava',
+                 'version': rootProject.ext.rxjava,
+                 'type': 'aar',
+                 'description': 'chushoulu android rxjava library:' +
+                         'net failure tip'
+                ],
+
+        'share':
+                ['groupId': rootProject.ext.variantGroupId,
+                 'artifactId': 'share',
+                 'version': rootProject.ext.share,
+                 'type': 'aar',
+                 'description': 'chushoulu android share library:' +
+                         'update app secrect'
+                ],
+        'zues':
+                ['groupId': 'tv.chushou.record.chushou',
+                 'artifactId': 'zues',
+                 'version': rootProject.ext.zues,
+                 'type': 'aar',
+                 'description': 'chushoulu android share library:' +
+                         'denpend from maven'
+                ],
+        'hermes':
+                ['groupId': 'tv.chushou.record.chushou',
+                 'artifactId': 'hermes',
+                 'version': rootProject.ext.hermes,
+                 'type': 'aar',
+                 'description': 'chushoulu android share library:' +
+                         'denpend from maven'
+                ],
+        'rtc':
+                ['groupId': 'tv.chushou.record',
+                 'artifactId': 'rtc',
+                 'version': rootProject.ext.rtc,
+                 'type': 'aar',
+                 'description': 'chushoulu android rtc library:' +
+                         'last version fro microom'
+                ],
+        // business module
+        'live':
+                ['groupId': rootProject.ext.variantGroupId,
+                 'artifactId': 'live',
+                 'version': rootProject.ext.live,
+                 'type': 'aar',
+                 'description': 'chushoulu android business module, live library' +
+                         'update msg ui'
+                ],
+        'mine':
+                ['groupId': rootProject.ext.variantGroupId,
+                 'artifactId': 'mine',
+                 'version': rootProject.ext.mine,
+                 'type': 'aar',
+                 'description': 'chushoulu android business module, mine library'+
+                         'account textview add phone split'
+                ],
+        'rec':
+                ['groupId': rootProject.ext.variantGroupId,
+                 'artifactId': 'rec',
+                 'version': rootProject.ext.rec,
+                 'type': 'aar',
+                 'description': 'chushoulu android business module, rec library'+
+                         'request float permission before start record'
+                ],
+        'zone':
+                ['groupId': rootProject.ext.variantGroupId,
+                 'artifactId': 'zone',
+                 'version': rootProject.ext.zone,
+                 'type': 'aar',
+                 'description': 'chushoulu android business module, zone library'+
+                         'denpend from maven'
+                ],
+        'microom':
+                ['groupId': 'tv.chushou.record.chushou',
+                 'artifactId': 'microom',
+                 'version': rootProject.ext.microom,
+                 'type': 'aar',
+                 'description': 'chushoulu android rtc library:' +
+                         'mic room for tv' +
+                         'denpend from maven' +
+                         'last version fro microom'
+                ],
+        'mixbusiness':
+                ['groupId': 'tv.chushou.record.chushou',
+                 'artifactId': 'mixbusiness',
+                 'version': rootProject.ext.mixbusiness,
+                 'type': 'aar',
+                 'description': 'chushoutv library to publish mixbusiness or upload video:' +
+                         'first version'
+                ],
+        'player':
+                ['groupId': 'tv.chushou.record.player',
+                 'artifactId': rootProject.ext.playerArtifactId,
+                 'version': rootProject.ext.player,
+                 'type': 'aar',
+                 'description': 'chushoulu android business module, player library'+
+                         'denpend from maven'
+                ]
+
+]
+
+project.each {Project project ->
+    def moduleName = project.name
+    def task = project.tasks.findByName("uploadArchives")
+    if (!uploadModule.contains(moduleName)) {
+        printErr "revmoe " + moduleName
+        if (null != task) {
+            project.tasks.remove(task)
+        }
+    } else {
+        def moduleConfig = uploadConfig[moduleName]
+        task.repositories.mavenDeployer.pom.groupId = moduleConfig['groupId']
+        task.repositories.mavenDeployer.pom.artifactId = moduleConfig['artifactId']
+        task.repositories.mavenDeployer.pom.version = moduleConfig['version']
+        task.repositories.mavenDeployer.pom.packaging = moduleConfig['type']
+        printErr "configure " + moduleName+"\n"+moduleConfig['description']
+    }
+}
+
+//---------------Upload End----------------------//

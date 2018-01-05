@@ -1,0 +1,31 @@
+afterEvaluate { project ->
+    task sourcesJar(type: Jar) {
+        from android.sourceSets.main.java.srcDirs
+        classifier = 'sources'
+    }
+
+    /*task javadoc(type: Javadoc) {
+        failOnError false
+        source = android.sourceSets.main.java.srcDirs
+        options {
+            encoding "UTF-8"
+            charSet = 'UTF-8'
+            author true
+            version true
+            links "http://docs.oracle.com/javase/7/docs/api/"
+        }
+        classpath += project.android.libraryVariants.toList().first().javaCompile.classpath
+        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    }
+
+    task javadocJar(type: Jar, dependsOn: javadoc) {
+        classifier = 'javadoc'
+        from javadoc.destinationDir
+    }*/
+
+    artifacts {
+//        archives javadocJar
+        archives sourcesJar
+    }
+
+}
