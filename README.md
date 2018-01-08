@@ -25,6 +25,7 @@
 * android系统层的知识
 * 触手录重构的项目架构
 * 隐藏api: <https://github.com/anggrayudi/android-hidden-api>
+* Android源码分析读书笔记
 
 ## Git
 * Git相关知识
