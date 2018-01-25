@@ -6,6 +6,7 @@
 * 深入理解 Android 卷I(很不错): <http://wiki.jikexueyuan.com/project/deep-android-v1/jni.html>
 
 #Fork说明
+
 在linux中，如果想要复制一个当前进程，用的最多的就是fork,中译“分叉”
 ![](WX20180122-180956.png =400x)
 
@@ -46,6 +47,7 @@
 
 
 #Android中创建进程的过程
+
 
 ## Step1: Process.start
 这个就是在android启动一个应用程序的时候, 为应用程序单独创建应用程序进程的地方，我们继续一步步往下看，启动应用程序，第一个就是activity,所以在创建应用程序的进程时，这里其实是通过ActivityThread创建的进程，稍微简单说明下参数:
@@ -208,6 +210,7 @@
     }
     
 ## Step3: ZygoteInit.main
+
 在android环境下,ps查询一下，可以看到第一个进程是init,这个进程是linux启动之后的第一个进程，它做了很多工作，其中一部分就是启动android中至关重要的zygote进程，zygote之从init进程fork&execv出来的进程，执行了app_main.cpp来替换fork出来的进程。具体可以参考链接资料[深入理解init](http://wiki.jikexueyuan.com/project/deep-android-v1/init.html)，它的其它章节也很好，我也学到了很多。zygote进程的启动是app_main.cpp启动的，只是重新给它命名了。在app_main.cpp中，会创建一个java虚拟机和注册natvie接口，然后调用ZygoteInit的main函数。回到我们的framework层代码。
 
 注册的本地socket相关知识，可以参考链接[本地socket](http://blog.csdn.net/jasonchen_gbd/article/details/45620073)
@@ -306,5 +309,7 @@
     }
 
 
+## Step4: SytemServer.main & ActivityThread.main
 
+这2个main函数，就是对应了system_server与应用启动的逻辑，对应不同的分析模块，在各自的模块中再详细分析吧。
 
