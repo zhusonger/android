@@ -5,7 +5,7 @@
 * 写时拷贝技术: <http://www.cnblogs.com/biyeymyhjob/archive/2012/07/20/2601655.html>
 * 深入理解 Android 卷I(很不错): <http://wiki.jikexueyuan.com/project/deep-android-v1/jni.html>
 
-#Fork说明
+# Fork说明
 
 在linux中，如果想要复制一个当前进程，用的最多的就是fork,中译“分叉”
 ![](WX20180122-180956.png =400x)
@@ -46,7 +46,7 @@
 这个是参考文章里截取的一部分测试代码，以及进程复制的示意图。可以看到，在执行fork之后的打印，出现了2种分支情况，fork的作用就是这样，从父进程__复制__一个与之基本相同的进程，注意了，这里的复制并不是深复制，我们知道复制可以分为深复制与浅复制。不是深复制，那么它就是浅复制，这个可以第二个参考链接地址。fork用到了linux的写时拷贝技术(copy on write), 简单的说，就是我复制的是一个指向父进程数据的地址，我指向父进程的数据，那么我在拷贝的时候，几乎没有性能消耗(记录一个数字能有多少消耗),当然了，还有虚拟空间的分配。但是，当父/子进程发生数据修改(write时)，就针对写的那部分单独为子进程分配物理内存。
 
 
-#Android中创建进程的过程
+# Android中创建进程的过程
 
 
 ## Step1: Process.start
@@ -311,5 +311,5 @@
 
 ## Step4: SytemServer.main & ActivityThread.main
 
-这2个main函数，就是对应了system_server与应用启动的逻辑，对应不同的分析模块，在各自的模块中再详细分析吧。
+这2个main函数，就是对应了system_server与应用启动的逻辑，对应不同的分析模块，在各自的模块中再详细分析吧。 
 
