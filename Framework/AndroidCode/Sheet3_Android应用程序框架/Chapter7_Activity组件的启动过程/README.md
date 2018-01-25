@@ -320,7 +320,7 @@ Instrumentation这个类在自动化测试经常会看到，这个类的作用�
         ......
 	   }
    
-__setInitialState__里设置了一些参数，其中有个函数__sendNewTaskResultRequestIfNeeded__, 这里会检测新的activity是否属于新的任务栈，如果是的，就直接回调onActivityResult。
+__setInitialState__ 里设置了一些参数，其中有个函数 __sendNewTaskResultRequestIfNeeded__ , 这里会检测新的activity是否属于新的任务栈，如果是的，就直接回调onActivityResult。
 		
 	private void sendNewTaskResultRequestIfNeeded() {
         if (mStartActivity.resultTo != null && (mLaunchFlags & FLAG_ACTIVITY_NEW_TASK) != 0
@@ -1444,6 +1444,8 @@ uid在android系统中对应的就是一个应用，mActiveUids获取到是否�
     
    
 ### Step 19: ActivityThread.main
+
+为什么会执行到这一步,在18步中的链接文件有说明，请自行阅读。这里内容有点多了，我分到下一个文件里继续分析。[README2](README2.md)
 
 
 

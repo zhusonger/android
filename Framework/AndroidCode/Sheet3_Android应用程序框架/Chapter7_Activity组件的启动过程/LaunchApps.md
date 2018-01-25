@@ -1,4 +1,4 @@
-#LaunchAppService
+# LaunchAppService
 
 ### Step1: LaunchApps.startMainActivity
 LauncherApps是一个系统服务在应用端的本地代理，调用的mService就是LauncherAppsService就是这个系统服务，它的创建过程与AMS一样，在SystemServer里构造出来的。
@@ -16,7 +16,7 @@ LauncherApps是一个系统服务在应用端的本地代理，调用的mService
     }
 
 
-###Step2: LauncherAppsService.startActivityAsUser (SystemServer)
+### Step2: LauncherAppsService.startActivityAsUser (SystemServer)
 
 我们忽略细节，抓住关键的几个点，Intent的组装，这里就应证了我们根节点的配置的说明，需要_Intent.ACTION_MAIN_ 和 _Intent.CATEGORY_LAUNCHER_, 同时它添加flag _Intent.FLAG_ACTIVITY_NEW_TASK_, 为了让启动的根activity在一个新的task，现在多了一个_Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED_的flag，还没有去研究过，先把握主体，放一放。
 
@@ -122,7 +122,7 @@ LauncherApps是一个系统服务在应用端的本地代理，调用的mService
         return context;
     }
  
-###Step3: ContextImpl.startActivityAsUser(App Thread)
+### Step3: ContextImpl.startActivityAsUser(App Thread)
 我们看到ContextImpl的startActivityAsUser方法，最后执行的过程是
 
 		try {
