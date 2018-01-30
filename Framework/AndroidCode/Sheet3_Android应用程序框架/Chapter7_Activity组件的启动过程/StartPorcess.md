@@ -9,7 +9,9 @@
 
 在linux中，如果想要复制一个当前进程，用的最多的就是fork,中译“分叉”
 
-![](WX20180122-180956.png)
+
+ ![](WX20180122-180956.png)
+
 
 		#include <unistd.h>
 		#include <stdio.h> 
