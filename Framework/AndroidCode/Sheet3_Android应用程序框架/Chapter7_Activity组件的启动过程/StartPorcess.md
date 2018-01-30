@@ -8,7 +8,8 @@
 # Fork说明
 
 在linux中，如果想要复制一个当前进程，用的最多的就是fork,中译“分叉”
-![](WX20180122-180956.png =400x)
+
+![](WX20180122-180956.png)
 
 		#include <unistd.h>
 		#include <stdio.h> 
@@ -218,8 +219,8 @@
 这里特别说明一下，在这段代码里，用了2种fork的方式创建进程，分别用来创建SystemServer进程与普通应用进程，fork的作用是复制，包括复制代码执行指针，所以fork之后，会在fork的代码之后分叉执行，一般在分支出来的子进程，他们都会抛出一个异常，不错，就是MethodAndArgsCaller，在fork出system_server之后，会抛出一个异常，那父进程zygote继续执行，子进程system_server就去执行MethodAndArgsCaller的run方法，也就是调用SystemServer里的main方法，同理，应用进程的启动也是一样，zygote人如其名，就是一个受精卵，接收到一个socket连接，创建一个进程，子进程抛出一个MethodAndArgsCaller异常执行ActivityThread的main方法，父进程一直在循环等待。
 
 > 示意图:
-	![](start_process.png)
 
+ ![](start_process.png)
 
 
 	public static void main(String argv[]) {
