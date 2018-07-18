@@ -1,5 +1,6 @@
 # float与double为什么不准确
-![alt](https://github.com/zhusonger/android/blob/master/resources/ef-8-48-1.png?raw=true)
+![alt](resources/ef-8-48-1.png)
+
 从图中可以看出，在小数点后依次表示的是0.5,0.25,0.125...
 那么假如我们要表示0.1是怎么个过程呢
 
