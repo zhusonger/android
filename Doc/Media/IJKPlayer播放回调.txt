@@ -1,0 +1,101 @@
+
+https://github.com/bilibili/ijkplayer/blob/master/android/ijkplayer/ijkplayer-java/src/main/java/tv/danmaku/ijk/media/player/IMediaPlayer.java
+
+一：软解消息回调过程
+
+Info: Media Event what:0, arg1:0, arg2:0
+Info: Media Event what:200, arg1:10005, arg2:0
+Info: Media Event what:200, arg1:10006, arg2:0
+Info: Media Event what:200, arg1:10007, arg2:0
+Info: Media Event what:5, arg1:856, arg2:480
+Info: Media Event what:10001, arg1:0, arg2:1
+Info: Media Event what:1, arg1:0, arg2:0
+Info: Media Event what:200, arg1:10001, arg2:0
+Info: Media Event what:200, arg1:701, arg2:0
+Info: Media Event what:3, arg1:15, arg2:11
+Info: Media Event what:200, arg1:702, arg2:0
+Info: Media Event what:200, arg1:10002, arg2:0
+Info: Media Event what:5, arg1:856, arg2:480
+Info: Media Event what:200, arg1:10004, arg2:0
+Info: Media Event what:5, arg1:856, arg2:480
+Info: Media Event what:5, arg1:856, arg2:480
+Info: Media Event what:200, arg1:3, arg2:0
+Info: Media Event what:200, arg1:10003, arg2:0
+Info: Media Event what:3, arg1:562, arg2:18
+Info: Media Event what:3, arg1:1098, arg2:30
+Info: Media Event what:3, arg1:1629, arg2:30
+Info: Media Event what:3, arg1:2155, arg2:15
+Info: Media Event what:3, arg1:2700, arg2:17
+Info: Media Event what:3, arg1:3230, arg2:30
+Info: Media Event what:3, arg1:3759, arg2:15
+Info: Media Event what:3, arg1:4291, arg2:15
+Info: Media Event what:3, arg1:4823, arg2:18
+Info: Media Event what:3, arg1:5352, arg2:30
+Info: Media Event what:3, arg1:5905, arg2:17
+Info: Media Event what:3, arg1:6434, arg2:22
+Info: Media Event what:3, arg1:6958, arg2:30
+
+0 0 0 测试消息
+200 	MEDIA_INFO arg1:MEDIA_INFO_OPEN_INPUT(10005) 打开流开始
+200 	MEDIA_INFO arg1:MEDIA_INFO_FIND_STREAM_INFO(10006) 查找流信息
+200 	MEDIA_INFO arg1:MEDIA_INFO_COMPONENT_OPEN(10007) 打开流结束 
+5 		MEDIA_SET_VIDEO_SIZE 回调notifyOnVideoSizeChanged 返回宽高
+10001 	MEDIA_SET_VIDEO_SAR(10001) 表示宽高已经刷新, arg1:sarnum arg2: sarden 回调notifyOnVideoSizeChanged
+1 		MEDIA_PREPARED 回调notifyOnPrepared
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_VIDEO_ROTATION_CHANGED(10001) 表示视频旋转
+200 	MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_BUFFERING_START(701) 表示视频开始缓冲
+3		MEDIA_BUFFERING_UPDATE 回调notifyOnBufferingUpdate arg1:当前播放的时间 通过getDuration计算出百分比,不过getDuration在直播中为0，没什么用
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_BUFFERING_END(702) 表示视频缓冲结束
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_AUDIO_RENDERING_START(10002) 表示音频缓冲开始
+5		MEDIA_SET_VIDEO_SIZE 回调notifyOnVideoSizeChanged 返回宽高
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_VIDEO_DECODED_START(10004) 表示视频开始解码
+5		MEDIA_SET_VIDEO_SIZE 回调notifyOnVideoSizeChanged 返回宽高
+5		MEDIA_SET_VIDEO_SIZE 回调notifyOnVideoSizeChanged 返回宽高
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_VIDEO_RENDERING_START(3) 表示视频开始渲染, 这里就是有画面了
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_AUDIO_DECODED_START(10003) 表示音频开始解码
+3		MEDIA_BUFFERING_UPDATE 回调notifyOnBufferingUpdate arg1:当前播放的时间(ms) 通过getDuration计算出百分比,不过getDuration在直播中为0，没什么用,之后就一直刷这个了
+
+二：硬解消息回调过程
+
+Info: Media Event what:0, arg1:0, arg2:0
+Info: Media Event what:200, arg1:10005, arg2:0
+Info: Media Event what:200, arg1:10006, arg2:0
+Info: Media Event what:200, arg1:10001, arg2:0
+Info: Media Event what:200, arg1:10007, arg2:0
+Info: Media Event what:5, arg1:856, arg2:480
+Info: Media Event what:10001, arg1:0, arg2:1
+Info: Media Event what:1, arg1:0, arg2:0
+Info: Media Event what:3, arg1:15, arg2:15
+Info: Media Event what:200, arg1:10003, arg2:0
+Info: Media Event what:200, arg1:10002, arg2:0
+Info: Media Event what:3, arg1:285, arg2:16
+Info: Media Event what:3, arg1:300, arg2:18
+Info: Media Event what:5, arg1:856, arg2:480
+Info: Media Event what:200, arg1:10004, arg2:0
+Info: Media Event what:5, arg1:856, arg2:480
+Info: Media Event what:200, arg1:3, arg2:0
+Info: Media Event what:5, arg1:856, arg2:480
+Info: Media Event what:3, arg1:604, arg2:30
+Info: Media Event what:3, arg1:1134, arg2:30
+Info: Media Event what:3, arg1:1685, arg2:17
+Info: Media Event what:3, arg1:2221, arg2:17
+
+0 0 0 测试消息
+200 	MEDIA_INFO arg1:MEDIA_INFO_OPEN_INPUT(10005) 打开流开始
+200 	MEDIA_INFO arg1:MEDIA_INFO_FIND_STREAM_INFO(10006) 查找流信息
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_VIDEO_ROTATION_CHANGED(10001) 表示视频旋转
+200 	MEDIA_INFO arg1:MEDIA_INFO_COMPONENT_OPEN(10007) 打开流结束 
+5 		MEDIA_SET_VIDEO_SIZE 回调notifyOnVideoSizeChanged 返回宽高
+10001 	MEDIA_SET_VIDEO_SAR(10001) 表示宽高已经刷新, arg1:sarnum arg2: sarden 回调notifyOnVideoSizeChanged
+1 		MEDIA_PREPARED 回调notifyOnPrepared
+3		MEDIA_BUFFERING_UPDATE 回调notifyOnBufferingUpdate arg1:当前播放的时间 通过getDuration计算出百分比,不过getDuration在直播中为0，没什么用
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_AUDIO_DECODED_START(10003) 表示音频开始解码
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_AUDIO_RENDERING_START(10002) 表示音频缓冲开始
+3		MEDIA_BUFFERING_UPDATE 回调notifyOnBufferingUpdate arg1:当前播放的时间 通过getDuration计算出百分比,不过getDuration在直播中为0，没什么用
+3		MEDIA_BUFFERING_UPDATE 回调notifyOnBufferingUpdate arg1:当前播放的时间 通过getDuration计算出百分比,不过getDuration在直播中为0，没什么用
+5		MEDIA_SET_VIDEO_SIZE 回调notifyOnVideoSizeChanged 返回宽高
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_VIDEO_DECODED_START(10004) 表示视频开始解码
+5		MEDIA_SET_VIDEO_SIZE 回调notifyOnVideoSizeChanged 返回宽高
+200		MEDIA_INFO 回调notifyOnInfo arg1:MEDIA_INFO_VIDEO_RENDERING_START(3) 表示视频开始渲染, 这里就是有画面了
+3		MEDIA_BUFFERING_UPDATE 回调notifyOnBufferingUpdate arg1:当前播放的时间(ms) 通过getDuration计算出百分比,不过getDuration在直播中为0，没什么用,之后就一直刷这个了
+
